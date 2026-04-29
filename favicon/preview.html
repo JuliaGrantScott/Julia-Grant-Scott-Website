@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BRAHMAMA · Favicon Preview</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+  :root {
+    --cream: #F6E9D2;
+    --paper: #FBF1DC;
+    --sindoor: #C9301E;
+    --sindoor-d: #8C1F12;
+    --ink: #2A1410;
+    --marigold: #E8A02A;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 60px 48px;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.01em;
+    margin: 0 0 8px;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--sindoor);
+    margin-bottom: 28px;
+  }
+  .lede {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 640px;
+    color: var(--ink);
+    opacity: 0.78;
+    margin-bottom: 56px;
+  }
+  h2 {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--sindoor);
+    margin: 56px 0 24px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid rgba(201, 48, 30, 0.22);
+  }
+  .row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 32px 24px;
+    background: var(--paper);
+    border: 0.5px solid rgba(201, 48, 30, 0.18);
+    border-radius: 4px;
+  }
+  .row.dark { background: var(--ink); }
+  .tile { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .tile img { display: block; image-rendering: -webkit-optimize-contrast; }
+  .tile.dark img { box-shadow: 0 0 0 0.5px rgba(246,233,210,0.15); }
+  .tile .label {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.28em;
+    color: var(--ink);
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .row.dark .tile .label { color: var(--cream); opacity: 0.6; }
+  .browser-mock {
+    background: var(--paper);
+    border: 0.5px solid rgba(201, 48, 30, 0.18);
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .browser-bar {
+    background: rgba(201,48,30,0.04);
+    padding: 10px 16px;
+    border-bottom: 0.5px solid rgba(201, 48, 30, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .browser-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cream);
+    border: 0.5px solid rgba(201,48,30,0.18);
+    border-radius: 8px 8px 0 0;
+    padding: 8px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink);
+  }
+  .browser-tab img { width: 16px; height: 16px; }
+  .body-mock {
+    padding: 32px;
+    color: var(--ink);
+    opacity: 0.55;
+    font-size: 14px;
+  }
+  .iphone {
+    width: 90px;
+    height: 90px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(42,20,16,0.18), 0 1px 0 rgba(255,255,255,0.6) inset;
+  }
+  .iphone img { width: 100%; height: 100%; display: block; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .variant-card {
+    background: var(--paper);
+    border: 0.5px solid rgba(201,48,30,0.18);
+    border-radius: 6px;
+    padding: 28px;
+    text-align: center;
+  }
+  .variant-card.alt { background: var(--cream); }
+  .variant-card img { width: 128px; height: 128px; margin-bottom: 16px; }
+  .variant-card .name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--sindoor);
+  }
+  .variant-card .desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink);
+    opacity: 0.7;
+    margin-top: 8px;
+  }
+  pre {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 24px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  pre .tag { color: var(--marigold); }
+  pre .attr { color: rgba(246,233,210,0.65); }
+  pre .str { color: #f0c089; }
+  .footnote {
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.55;
+    margin-top: 8px;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+</style>
+</head>
+<body>
+
+<div class="eyebrow">·●●●·  BRAHMAMA  ·●●●·</div>
+<h1>Favicon — Julia Grant Scott</h1>
+<p class="lede">
+  The mark holds the Om glyph at centre, ringed by the Flower of Life and crowned by
+  the tristana — the brand's three sacred elements rendered for a 16-pixel canvas.
+  Sindoor on cream, presented bold.
+</p>
+
+<h2>· Sizes ·</h2>
+<div class="row">
+  <div class="tile"><img src="favicon-16x16.png"  width="16"  height="16"  alt="16"><div class="label">16 px</div></div>
+  <div class="tile"><img src="favicon-32x32.png"  width="32"  height="32"  alt="32"><div class="label">32 px</div></div>
+  <div class="tile"><img src="favicon_bold_48.png" width="48"  height="48"  alt="48" onerror="this.src='icon-192.png';this.width=48;this.height=48"><div class="label">48 px</div></div>
+  <div class="tile"><img src="apple-touch-icon.png" width="64"  height="64"  alt="64"><div class="label">64 px</div></div>
+  <div class="tile"><img src="apple-touch-icon.png" width="128" height="128" alt="128"><div class="label">128 px</div></div>
+  <div class="tile"><img src="icon-192.png" width="192" height="192" alt="192"><div class="label">192 px</div></div>
+</div>
+
+<h2>· In context ·</h2>
+<div class="browser-mock">
+  <div class="browser-bar">
+    <div class="browser-tab">
+      <img src="favicon-16x16.png" alt="">
+      <span>juliagrantscott.com</span>
+    </div>
+  </div>
+  <div class="body-mock">Browser tab — 16px favicon.ico</div>
+</div>
+<div class="row" style="gap: 24px; align-items: center;">
+  <div class="iphone"><img src="apple-touch-icon.png" alt="iPhone home screen"></div>
+  <div style="font-size:14px; opacity:0.7;">
+    Home screen icon — 180×180 (apple-touch-icon)
+  </div>
+</div>
+
+<h2>· Two ways ·</h2>
+<div class="grid">
+  <div class="variant-card">
+    <img src="icon-512.png" alt="Bold sindoor base">
+    <div class="name">Bold</div>
+    <div class="desc">Sindoor field, cream Om — high contrast, reads at every size.<br><em>Recommended for the website.</em></div>
+  </div>
+  <div class="variant-card alt">
+    <img src="favicon-alt-512.png" alt="Cream base, sindoor Om">
+    <div class="name">Cream Mono</div>
+    <div class="desc">Cream field, sindoor Om — quieter, follows the brand's ceremonial restraint.</div>
+  </div>
+</div>
+
+<h2>· HTML installation ·</h2>
+<pre><span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"icon"</span> <span class="attr">type</span>=<span class="str">"image/svg+xml"</span> <span class="attr">href</span>=<span class="str">"/favicon.svg"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"alternate icon"</span> <span class="attr">href</span>=<span class="str">"/favicon.ico"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"icon"</span> <span class="attr">type</span>=<span class="str">"image/png"</span> <span class="attr">sizes</span>=<span class="str">"16x16"</span>  <span class="attr">href</span>=<span class="str">"/favicon-16x16.png"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"icon"</span> <span class="attr">type</span>=<span class="str">"image/png"</span> <span class="attr">sizes</span>=<span class="str">"32x32"</span>  <span class="attr">href</span>=<span class="str">"/favicon-32x32.png"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"apple-touch-icon"</span> <span class="attr">sizes</span>=<span class="str">"180x180"</span> <span class="attr">href</span>=<span class="str">"/apple-touch-icon.png"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"theme-color"</span> <span class="attr">content</span>=<span class="str">"#C9301E"</span><span class="tag">&gt;</span></pre>
+<p class="footnote">Drop the files at the root of the site. The SVG handles modern browsers (and scales perfectly on retina); the .ico carries 16/32/48 for older browsers.</p>
+
+</body>
+</html>
