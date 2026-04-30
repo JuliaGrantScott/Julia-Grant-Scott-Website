@@ -797,6 +797,28 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   gap: 2.5rem;
 }
 
+/* Practice section closing CTA */
+.practice-cta {
+  margin-top: 4.5rem;
+  padding-top: 2.5rem;
+  border-top: 0.5px solid rgba(201,48,30,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.practice-cta-quote {
+  font-family: var(--font-literary);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+  opacity: 0.6;
+  margin: 0;
+}
+
 .pillar-item {
   padding: 2.8rem 0 2rem;
   border-top: 0.5px solid rgba(201,48,30,0.22);
@@ -967,9 +989,10 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   font-style: normal;
 }
 
-/* Copy button — bio page */
+/* Bio CTA button — works as <button> or <a> */
 .bio-copy-btn {
   display: block;
+  width: fit-content;
   margin: 3rem auto 0;
   padding: 13px 36px;
   background: transparent;
@@ -979,6 +1002,8 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   font-size: 8px;
   letter-spacing: 0.36em;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -1483,6 +1508,13 @@ footer {
   .practice-header { margin-bottom: 2.5rem; }
   .pillars-grid { grid-template-columns: 1fr; gap: 0; }
   .pillar-item { padding: 2rem 0 1.4rem; }
+  .practice-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
 
   /* About / bio — tighter padding */
   .about-inner { padding: 0; }
@@ -1597,10 +1629,10 @@ footer {
 
   <!-- Links — centre -->
   <ul class="nav-links">
-    <li><a href="#yatra">Yatra</a></li>
+    <li><a href="#yatra">Retreats</a></li>
+    <li><a href="#sangha">Voices</a></li>
+    <li><a href="#practice">Practice</a></li>
     <li><a href="#sound">Sound</a></li>
-    <li><a href="#practice">Ceremony</a></li>
-    <li><a href="#sangha">Sangha</a></li>
     <li><a href="#about">About</a></li>
   </ul>
 
@@ -1622,10 +1654,10 @@ footer {
 <!-- ══ MOBILE DRAWER ════════════════════════════════════════ -->
 <div class="nav-drawer" id="mobile-drawer" aria-label="Mobile navigation" hidden>
   <ul>
-    <li><a href="#yatra">Yatra</a></li>
+    <li><a href="#yatra">Retreats</a></li>
+    <li><a href="#sangha">Voices</a></li>
+    <li><a href="#practice">Practice</a></li>
     <li><a href="#sound">Sound</a></li>
-    <li><a href="#practice">Ceremony</a></li>
-    <li><a href="#sangha">Sangha</a></li>
     <li><a href="#about">About</a></li>
   </ul>
   <a href="#book" class="nav-drawer-cta">☽ Book</a>
@@ -1854,6 +1886,11 @@ footer {
       <p class="pillar-desc">Vedanta philosophy and dharmic talks. Who am I? Confronting blind spots, dissolving the limiting self-concept, and returning to the real self.</p>
     </div>
   </div>
+
+  <div class="practice-cta">
+    <p class="practice-cta-quote">The four pillars meet on retreat.</p>
+    <a href="#yatra" class="btn-sindoor">☽ Join a Retreat</a>
+  </div>
 </section>
 
 <!-- ══ ABOUT / BIO ════════════════════════════════════════════ -->
@@ -1915,7 +1952,7 @@ footer {
       <span class="bio-attribution">— Julia Grant-Scott</span>
     </div>
 
-    <button class="bio-copy-btn" onclick="copyBio()">Copy Bio Text</button>
+    <a href="#yatra" class="bio-copy-btn">Learn More</a>
 
   </div>
 </section>
