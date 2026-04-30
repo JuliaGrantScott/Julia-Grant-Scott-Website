@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joie de Vivre · A Paris Yoga Immersion · Julia Grant-Scott & Helen Eastwood</title>
+<meta name="description" content="A four-day yoga immersion at Shala 33 in Montreuil, Paris. Ashtanga Vinyasa Yoga, Sanskrit chanting, sound meditation, and self-realization. 1–4 October 2026. Led by Julia Grant-Scott and Helen Eastwood.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:      #F6E9D2;
+  --paper:      #FBF1DC;
+  --sindoor:    #C9301E;
+  --sindoor-d:  #8C1F12;
+  --marigold:   #E8A02A;
+  --tulsi:      #3E5A3A;
+  --ink:        #2A1410;
+  --font-sacred:   'Tiro Devanagari Hindi', serif;
+  --font-literary: 'Cormorant Garamond', Georgia, serif;
+  --font-label:    'JetBrains Mono', 'Courier New', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-literary);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.85;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: 0.28;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes drawLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes slowZoom { from { transform: scale(1.06); } to { transform: scale(1.0); } }
+@keyframes breathe { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.04); } }
+@keyframes floatUp { 0% { transform: translateY(0); } 50% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+
+.hero-load { opacity: 0; animation: fadeUp 1.4s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero-load.d1 { animation-delay: .15s; }
+.hero-load.d2 { animation-delay: .45s; }
+.hero-load.d3 { animation-delay: .80s; }
+.hero-load.d4 { animation-delay: 1.15s; }
+.hero-load.d5 { animation-delay: 1.45s; }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 1.4s cubic-bezier(.16,.84,.32,1), transform 1.4s cubic-bezier(.16,.84,.32,1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-44px); transition: opacity 1.4s cubic-bezier(.16,.84,.32,1), transform 1.4s cubic-bezier(.16,.84,.32,1); }
+.reveal-left.in { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(44px); transition: opacity 1.4s cubic-bezier(.16,.84,.32,1), transform 1.4s cubic-bezier(.16,.84,.32,1); }
+.reveal-right.in { opacity: 1; transform: translateX(0); }
+.reveal-scale { opacity: 0; transform: scale(1.04); transition: opacity 1.6s cubic-bezier(.16,.84,.32,1), transform 1.8s cubic-bezier(.16,.84,.32,1); }
+.reveal-scale.in { opacity: 1; transform: scale(1); }
+.reveal.delay-1, .reveal-left.delay-1, .reveal-right.delay-1, .reveal-scale.delay-1 { transition-delay: .14s; }
+.reveal.delay-2, .reveal-left.delay-2, .reveal-right.delay-2, .reveal-scale.delay-2 { transition-delay: .28s; }
+.reveal.delay-3, .reveal-left.delay-3, .reveal-right.delay-3, .reveal-scale.delay-3 { transition-delay: .42s; }
+.reveal.delay-4, .reveal-left.delay-4, .reveal-right.delay-4, .reveal-scale.delay-4 { transition-delay: .56s; }
+.reveal.delay-5, .reveal-left.delay-5, .reveal-right.delay-5, .reveal-scale.delay-5 { transition-delay: .70s; }
+.reveal.delay-6 { transition-delay: .84s; }
+.reveal-fade { opacity: 0; transition: opacity 1.6s ease; }
+.reveal-fade.in { opacity: 1; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+.wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
+
+section { position: relative; padding: 7rem 0; }
+@media (max-width: 720px) { section { padding: 5rem 0; } }
+
+.eyebrow {
+  font-family: var(--font-label); font-size: 9px; font-weight: 400;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: var(--sindoor); display: inline-block; margin-bottom: 2rem;
+}
+.section-title {
+  font-family: var(--font-literary);
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-weight: 500; line-height: 1.12; letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+}
+.section-title em { font-weight: 300; font-style: italic; }
+.sindoor-rule {
+  width: 56px; height: 0.5px; background: var(--sindoor); opacity: 0.45;
+  margin: 2rem 0; transform-origin: left center;
+  animation: drawLine 1.4s cubic-bezier(.2,.7,.2,1) forwards;
+}
+.tristana { display: inline-block; vertical-align: middle; }
+
+/* ══ IMAGE PLACEHOLDER SYSTEM ════════════════════════════════ */
+.img-placeholder {
+  position: relative;
+  background-color: #D7C7A7;
+  background-image:
+    linear-gradient(135deg, transparent 49.5%, rgba(140,31,18,0.07) 49.5%, rgba(140,31,18,0.07) 50.5%, transparent 50.5%),
+    linear-gradient(45deg,  transparent 49.5%, rgba(140,31,18,0.07) 49.5%, rgba(140,31,18,0.07) 50.5%, transparent 50.5%);
+  background-size: 28px 28px;
+  overflow: hidden;
+}
+.img-placeholder::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(251,241,220,0.45) 0%, rgba(251,241,220,0) 65%);
+  pointer-events: none;
+}
+.img-placeholder::after {
+  content: '◇  ' attr(data-label) '  ◇';
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: rgba(140,31,18,0.72);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+.img-placeholder.dark { background-color: #2c1812; }
+.img-placeholder.dark::before { background: radial-gradient(ellipse at center, rgba(232,160,42,0.10) 0%, rgba(0,0,0,0) 60%); }
+.img-placeholder.dark::after { color: rgba(246,233,210,0.62); }
+
+/* ══ NAV ═════════════════════════════════════════════════════ */
+nav.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(251, 241, 220, 0.92);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid rgba(201, 48, 30, 0.16);
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center; padding: 0 2.5rem; height: 68px;
+  transition: background .4s ease, box-shadow .4s ease;
+}
+nav.topnav.scrolled { box-shadow: 0 1px 24px rgba(42,20,16,0.06); }
+.nav-mark { display: flex; align-items: center; gap: 0.7rem; }
+.nav-mark .om { font-family: var(--font-sacred); font-size: 24px; color: var(--sindoor); line-height: 1; }
+.nav-mark .word { font-family: var(--font-label); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; color: var(--sindoor); }
+.nav-mark .sub { font-family: var(--font-literary); font-style: italic; font-size: 10px; color: rgba(42,20,16,0.5); display: block; letter-spacing: 0.04em; }
+.nav-links { display: flex; gap: 2.4rem; justify-content: center; }
+.nav-links a { font-family: var(--font-label); font-size: 9.5px; font-weight: 400; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(42,20,16,0.72); transition: color .3s ease; }
+.nav-links a:hover { color: var(--sindoor); }
+.nav-cta {
+  justify-self: end;
+  font-family: var(--font-label); font-size: 9px; font-weight: 500;
+  letter-spacing: 0.36em; text-transform: uppercase;
+  color: var(--sindoor); border: 0.5px solid var(--sindoor);
+  border-radius: 999px; padding: 0.55rem 1.1rem;
+  transition: all .3s ease;
+}
+.nav-cta:hover { background: var(--sindoor); color: var(--cream); }
+@media (max-width: 880px) {
+  nav.topnav { grid-template-columns: 1fr auto; padding: 0 1.4rem; }
+  .nav-links { display: none; }
+}
+
+/* ══ HERO ════════════════════════════════════════════════════ */
+.hero {
+  min-height: 100vh; padding: 0;
+  display: grid; grid-template-columns: 1.05fr 1fr;
+  align-items: stretch; background: var(--cream);
+  position: relative; overflow: hidden;
+}
+.hero-text {
+  padding: clamp(6rem, 12vw, 9rem) clamp(2rem, 5vw, 5rem) 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-family: var(--font-label); font-size: 9px; letter-spacing: 0.5em;
+  color: var(--sindoor); text-transform: uppercase; margin-bottom: 2rem;
+}
+.hero-eyebrow .om { font-family: var(--font-sacred); font-size: 14px; vertical-align: middle; margin-right: 0.5em; }
+h1.hero-title {
+  font-family: var(--font-literary); font-weight: 500;
+  font-size: clamp(2.4rem, 5.6vw, 4.6rem);
+  line-height: 1.04; letter-spacing: -0.012em;
+  color: var(--sindoor-d); margin-bottom: 2.4rem;
+}
+h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); }
+.hero-meta {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: 0.34em;
+  text-transform: uppercase; color: rgba(140,31,18,0.72);
+  margin-top: 1.4rem;
+}
+.hero-meta span { color: var(--sindoor); }
+
+.hero-image { position: relative; overflow: hidden; background: var(--cream); }
+.hero-image .main-img {
+  width: 100%; height: 100%;
+  animation: slowZoom 14s ease-out forwards;
+}
+.hero-image::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(115deg, rgba(253,246,227,0.20) 0%, rgba(253,246,227,0) 28%);
+  pointer-events: none;
+}
+@media (max-width: 880px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-image { min-height: 60vh; order: -1; }
+  .hero-text { padding-top: 6rem; padding-bottom: 6rem; }
+}
+
+.hero-dots {
+  display: flex; align-items: center;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+.hero-dots span {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--sindoor);
+  display: inline-block;
+}
+
+/* ══ OVERVIEW ════════════════════════════════════════════════ */
+.overview { background: var(--paper); padding: 8rem 0; }
+.overview-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
+.overview-grid .eyebrow-col { position: sticky; top: 100px; }
+.overview-body { font-family: var(--font-literary); font-weight: 300; font-size: 1.18rem; line-height: 1.85; color: #4a2820; }
+.overview-body strong { font-weight: 500; color: var(--sindoor-d); font-style: italic; }
+@media (max-width: 760px) {
+  .overview-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .overview-grid .eyebrow-col { position: static; }
+}
+
+/* ══ KEY DETAILS BAR ═════════════════════════════════════════ */
+.key-details { background: var(--cream); padding: 5rem 0 6rem; }
+.kd-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  border-top: 1px solid rgba(201,48,30,0.32);
+  border-bottom: 1px solid rgba(201,48,30,0.32);
+}
+.kd-cell { padding: 3rem 1.6rem; border-right: 0.5px solid rgba(201,48,30,0.22); position: relative; }
+.kd-cell:last-child { border-right: none; }
+.kd-label {
+  font-family: var(--font-label); font-size: 9.5px; font-weight: 500;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--sindoor); margin-bottom: 1.4rem; opacity: 0.95;
+}
+.kd-value {
+  font-family: var(--font-literary); font-weight: 500;
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+  line-height: 1.18; color: var(--sindoor-d);
+}
+.kd-value em {
+  font-weight: 300; font-style: italic;
+  color: rgba(140,31,18,0.55); display: block;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  margin-top: 0.6rem; letter-spacing: 0.02em;
+  font-family: var(--font-literary);
+}
+@media (max-width: 880px) {
+  .kd-grid { grid-template-columns: 1fr 1fr; }
+  .kd-cell { border-bottom: 0.5px solid rgba(201,48,30,0.22); padding: 2.2rem 1.4rem; }
+  .kd-cell:nth-child(2n) { border-right: none; }
+  .kd-cell:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (max-width: 520px) {
+  .kd-grid { grid-template-columns: 1fr; }
+  .kd-cell { border-right: none; border-bottom: 0.5px solid rgba(201,48,30,0.22); }
+  .kd-cell:last-child { border-bottom: none; }
+}
+
+/* ══ VENUE FULL-BLEED ════════════════════════════════════════ */
+.venue-hero {
+  padding: 0; height: 90vh; min-height: 580px;
+  position: relative; overflow: hidden;
+}
+.venue-hero .img-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; }
+.venue-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(42,20,16,0.10) 0%, rgba(42,20,16,0) 35%,
+    rgba(42,20,16,0) 65%, rgba(42,20,16,0.30) 100%);
+  z-index: 2;
+}
+.venue-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
+  padding: 4rem clamp(2rem, 6vw, 5rem); color: var(--cream);
+  display: flex; align-items: end; justify-content: space-between;
+  flex-wrap: wrap; gap: 2rem;
+}
+.venue-overlay h2 {
+  font-family: var(--font-literary); font-style: italic;
+  font-weight: 400; font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.3; max-width: 30ch;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+.venue-overlay .place {
+  font-family: var(--font-label); font-size: 10px;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--marigold);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* ══ PHILOSOPHY ══════════════════════════════════════════════ */
+.philosophy { padding: 0; background: var(--paper); }
+
+.philosophy-intro {
+  background: var(--paper); color: var(--sindoor-d);
+  padding: 7rem 0 5rem; text-align: center;
+}
+.philosophy-intro .section-title { color: var(--sindoor-d); }
+.philosophy-intro .section-title em { color: var(--sindoor); }
+.philosophy-intro .sindoor-rule { background: var(--sindoor); margin: 2rem auto; }
+
+.phil-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 75vh;
+  background: var(--paper);
+}
+.phil-split.flip { grid-template-columns: 1.2fr 1fr; }
+.phil-split.flip .phil-split-text { order: 2; }
+.phil-split.flip .phil-split-photo { order: 1; }
+.phil-split-text {
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(4rem, 7vw, 6rem) clamp(2rem, 5vw, 4rem);
+  background: var(--paper); color: var(--sindoor-d);
+  position: relative;
+}
+.phil-split-text-inner { max-width: 460px; }
+.phil-split-text .panel-num {
+  font-family: var(--font-label); font-size: 10px;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: var(--sindoor); margin-bottom: 1.4rem; display: block;
+}
+.phil-split-text h3 {
+  font-family: var(--font-literary); font-weight: 400;
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  line-height: 1.2; color: var(--sindoor-d); margin-bottom: 1.4rem;
+}
+.phil-split-text h3 em { font-style: italic; color: var(--sindoor); }
+.phil-split-text p {
+  font-family: var(--font-literary); font-weight: 300;
+  font-size: 1.05rem; line-height: 1.85; color: #4a2820;
+}
+.phil-split-text p + p { margin-top: 1rem; }
+.phil-split-text .sindoor-rule { margin: 1.6rem 0; }
+.phil-split-photo {
+  position: relative; overflow: hidden;
+  min-height: 60vh;
+}
+.phil-split-photo .img-placeholder { position: absolute; inset: 0; }
+
+@media (max-width: 760px) {
+  .phil-split { grid-template-columns: 1fr; }
+  .phil-split.flip .phil-split-text { order: 2; }
+  .phil-split.flip .phil-split-photo { order: 1; }
+}
+
+/* ══ INCLUDED — DENSE COLLAGE ════════════════════════════════ */
+.included { background: var(--cream); padding: 7rem 0 6rem; }
+.included-head { text-align: center; margin-bottom: 3.5rem; }
+.included-head .sindoor-rule { margin: 1.6rem auto; }
+.included-sub {
+  font-family: var(--font-literary); font-style: italic;
+  color: rgba(140,31,18,0.62); font-size: 1.05rem; margin-top: 0.5rem;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px;
+  gap: 8px;
+  max-width: 1320px; margin: 0 auto; padding: 0 2rem;
+}
+@media (max-width: 1200px) { .collage { grid-auto-rows: 170px; } }
+@media (max-width: 880px) {
+  .collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+}
+.collage .tile {
+  position: relative; overflow: hidden;
+  background: var(--paper); cursor: default;
+}
+.collage .tile .img-placeholder {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+.collage .tile:hover .img-placeholder { transform: scale(1.06); }
+.collage .tile::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(42,20,16,0) 35%, rgba(42,20,16,0.62) 100%);
+  z-index: 2; pointer-events: none;
+}
+.collage .tile .label {
+  position: absolute; left: 0.9rem; right: 0.9rem; bottom: 0.9rem;
+  z-index: 3; color: var(--cream);
+}
+.collage .tile .num {
+  font-family: var(--font-label); font-size: 8.5px; font-weight: 500;
+  letter-spacing: 0.36em; color: var(--marigold);
+  margin-bottom: 0.3rem; display: block;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+.collage .tile .title {
+  font-family: var(--font-literary); font-weight: 500;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  line-height: 1.18; color: var(--cream);
+  text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+}
+/* 7 tiles for the Paris immersion: 6 cols × 3 rows */
+.collage .t01 { grid-column: 1 / span 2; grid-row: 1 / span 2; }
+.collage .t02 { grid-column: 3 / span 2; grid-row: 1 / span 1; }
+.collage .t03 { grid-column: 5 / span 2; grid-row: 1 / span 2; }
+.collage .t04 { grid-column: 3 / span 2; grid-row: 2 / span 2; }
+.collage .t05 { grid-column: 1 / span 2; grid-row: 3 / span 1; }
+.collage .t06 { grid-column: 5 / span 1; grid-row: 3 / span 1; }
+.collage .t07 { grid-column: 6 / span 1; grid-row: 3 / span 1; }
+.collage .t04 .title { font-size: clamp(1.2rem, 1.6vw, 1.5rem); }
+.collage .t01 .title, .collage .t03 .title { font-size: clamp(1.05rem, 1.3vw, 1.25rem); }
+@media (max-width: 880px) {
+  .collage .t01, .collage .t02, .collage .t03, .collage .t04,
+  .collage .t05, .collage .t06, .collage .t07 {
+    grid-column: auto; grid-row: auto;
+  }
+  .collage .t01, .collage .t04 { grid-column: 1 / span 2; }
+}
+
+/* ══ LOGISTICS ═══════════════════════════════════════════════ */
+.logistics {
+  background: var(--paper); padding: 5rem 0;
+  border-top: 1px solid rgba(201,48,30,0.28);
+  border-bottom: 1px solid rgba(201,48,30,0.28);
+}
+.logistics .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: center; }
+.log-cell { text-align: center; position: relative; }
+.log-cell:not(:last-child)::after {
+  content: ''; position: absolute; right: -1.5rem; top: 18%; bottom: 18%;
+  width: 0.5px; background: rgba(201,48,30,0.3);
+}
+.log-label {
+  font-family: var(--font-label); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.45em; text-transform: uppercase;
+  color: var(--sindoor); margin-bottom: 1.2rem;
+}
+.log-value {
+  font-family: var(--font-literary); font-weight: 500;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.18; color: var(--sindoor-d);
+}
+.log-value em {
+  font-weight: 300; font-style: italic;
+  color: rgba(140,31,18,0.6); display: block;
+  font-size: clamp(0.9rem, 1vw, 1rem); margin-top: 0.4rem;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 720px) {
+  .logistics .wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+  .log-cell:not(:last-child)::after { display: none; }
+  .log-cell { padding-bottom: 1.2rem; border-bottom: 0.5px dashed rgba(201,48,30,0.18); }
+  .log-cell:last-child { border-bottom: none; padding-bottom: 0; }
+}
+
+/* ══ SCHEDULE ════════════════════════════════════════════════ */
+.schedule { background: var(--cream); padding: 8rem 0; }
+.schedule-intro { text-align: center; margin-bottom: 5rem; }
+.day-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
+@media (max-width: 880px) { .day-grid { grid-template-columns: 1fr; } }
+.day-card {
+  background: var(--paper);
+  border: 0.5px solid rgba(201,48,30,0.22);
+  padding: 2.4rem 2.2rem;
+  position: relative; overflow: hidden;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1),
+              box-shadow .5s cubic-bezier(.2,.7,.2,1),
+              border-color .35s ease, background .5s ease;
+}
+.day-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; background: var(--sindoor);
+  transform: scaleX(0); transform-origin: left center;
+  transition: transform .55s cubic-bezier(.2,.7,.2,1); z-index: 4;
+}
+.day-card::after {
+  content: '\0950'; position: absolute;
+  bottom: -28px; right: -10px;
+  font-family: var(--font-sacred); font-size: 130px;
+  color: var(--sindoor); opacity: 0;
+  transition: opacity .55s ease, transform .55s ease;
+  pointer-events: none; line-height: 1;
+}
+.day-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 60px -15px rgba(140, 31, 18, 0.28),
+    0 16px 32px -12px rgba(42, 20, 16, 0.18),
+    0 4px 12px -4px rgba(42, 20, 16, 0.08);
+  border-color: var(--sindoor);
+  background: #fff8e8;
+}
+.day-card:hover::before { transform: scaleX(1); }
+.day-card:hover::after { opacity: 0.07; transform: translate(-6px, -6px); }
+.day-card:hover .day-name { color: var(--sindoor-d); letter-spacing: 0.005em; }
+.day-card .day-num {
+  font-family: var(--font-label); font-size: 9px; font-weight: 500;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--sindoor); margin-bottom: 0.6rem;
+  position: relative; z-index: 5;
+}
+.day-card .day-name {
+  font-family: var(--font-literary); font-weight: 500;
+  font-size: 1.55rem; color: var(--sindoor-d); margin-bottom: 0.3rem;
+  transition: color .4s ease, letter-spacing .4s ease;
+  position: relative; z-index: 5;
+}
+.day-card .day-tag {
+  font-family: var(--font-literary); font-style: italic;
+  font-weight: 300; font-size: 0.95rem; color: rgba(140,31,18,0.55);
+  margin-bottom: 1.6rem; padding-bottom: 1.2rem;
+  border-bottom: 0.5px solid rgba(201,48,30,0.22);
+  position: relative; z-index: 5;
+}
+.day-card ul { list-style: none; position: relative; z-index: 5; }
+.day-card li {
+  display: grid; grid-template-columns: 110px 1fr; gap: 1rem;
+  padding: 0.55rem 0;
+  font-family: var(--font-literary); font-size: 1rem; line-height: 1.5;
+}
+.day-card li .time {
+  font-family: var(--font-label); font-size: 9.5px; font-weight: 400;
+  letter-spacing: 0.16em; color: var(--sindoor); padding-top: 3px;
+}
+.day-card li .activity { color: rgba(74,40,32,0.92); }
+
+/* ══ FACILITATOR ═════════════════════════════════════════════ */
+.facilitator { background: var(--paper); padding: 9rem 0; }
+.facilitator + .facilitator { padding-top: 0; }
+.facil-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+.facil-grid.flip { grid-template-columns: 1.2fr 1fr; }
+.facil-grid.flip .facil-photo-col { order: 2; }
+.facil-grid.flip .facil-bio { order: 1; }
+.facil-photo-wrap { position: relative; padding: 0 14px 14px 0; }
+.facil-photo {
+  position: relative; aspect-ratio: 3 / 4;
+  overflow: hidden; background: var(--paper);
+}
+.facil-photo .img-placeholder { position: absolute; inset: 0; transition: transform 2s cubic-bezier(.2,.7,.2,1); }
+.facil-photo:hover .img-placeholder { transform: scale(1.04); }
+.facil-photo::before {
+  content: ''; position: absolute;
+  bottom: -14px; right: -14px; width: 78%; height: 78%;
+  border: 0.5px solid var(--sindoor); z-index: -1; opacity: 0.6;
+}
+.facil-bio p { margin-bottom: 1.4rem; font-size: 1.08rem; line-height: 1.85; color: #4a2820; }
+.facil-bio p.lead-quote {
+  font-family: var(--font-literary); font-style: italic;
+  font-weight: 400; font-size: 1.3rem; line-height: 1.55;
+  color: var(--sindoor-d);
+  border-left: 1px solid rgba(201,48,30,0.4);
+  padding-left: 1.4rem; margin: 2rem 0;
+}
+.facil-bio p.italic { font-style: italic; color: rgba(140,31,18,0.78); }
+.brahmama-mark {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-label); font-size: 9px;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--sindoor); margin-top: 0.5rem;
+}
+.brahmama-mark .om { font-family: var(--font-sacred); font-size: 18px; line-height: 1; }
+.facilitator-divider {
+  background: var(--paper);
+  text-align: center;
+  padding: 1rem 0 4rem;
+}
+.facilitator-divider .ornament {
+  font-family: var(--font-sacred);
+  font-size: 28px;
+  color: var(--sindoor);
+  opacity: 0.5;
+  letter-spacing: 1.6em;
+}
+@media (max-width: 880px) {
+  .facil-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .facil-grid.flip .facil-photo-col { order: 1; }
+  .facil-grid.flip .facil-bio { order: 2; }
+}
+
+/* ══ SUTRA BRIDGE — Parisian autumn ═════════════════════════ */
+.sutra-bridge {
+  position: relative;
+  height: 92vh; min-height: 620px;
+  overflow: hidden; padding: 0;
+  background: #1a0d0a;
+}
+.sutra-bridge .img-placeholder {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  animation: slowZoom 22s ease-out forwards;
+}
+.sutra-bridge::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(42,20,16,0.0) 0%,
+      rgba(42,20,16,0.0) 50%,
+      rgba(42,20,16,0.55) 78%,
+      rgba(42,20,16,0.85) 100%);
+  z-index: 2;
+}
+.sutra-content {
+  position: relative; z-index: 3;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  height: 100%;
+  padding: 0 2rem 8vh; text-align: center; color: var(--cream);
+}
+.sutra-marker {
+  font-family: var(--font-label);
+  font-size: 9.5px; letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--marigold);
+  margin-bottom: 2.4rem;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.6);
+}
+.sutra-sanskrit {
+  font-family: var(--font-literary); font-style: italic;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1.3;
+  color: var(--cream);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 0 60px rgba(232,160,42,0.2);
+  max-width: 28ch;
+}
+.sutra-translit {
+  font-family: var(--font-literary);
+  font-style: italic; font-weight: 300;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  letter-spacing: 0.04em;
+  color: var(--marigold);
+  opacity: 0.92;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 14px rgba(0,0,0,0.5);
+}
+.sutra-rule {
+  width: 1px; height: 64px;
+  background: linear-gradient(180deg, transparent, rgba(232,160,42,0.7), transparent);
+  margin: 2rem auto;
+}
+
+/* ══ CLOSING IMAGE ══════════════════════════════════════════ */
+.closing-image {
+  padding: 0; height: 80vh; min-height: 520px;
+  position: relative; overflow: hidden;
+}
+.closing-image .img-placeholder {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+}
+.closing-image::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(42,20,16,0.05) 0%, rgba(42,20,16,0) 30%,
+    rgba(42,20,16,0) 70%, rgba(42,20,16,0.45) 100%);
+  z-index: 2;
+}
+.closing-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  z-index: 3;
+  padding: 4rem clamp(2rem, 6vw, 5rem);
+  color: var(--cream);
+  text-align: center;
+}
+.closing-overlay .eyebrow {
+  color: var(--marigold);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  margin-bottom: 0.8rem;
+}
+.closing-overlay h2 {
+  font-family: var(--font-literary);
+  font-style: italic; font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.3;
+  max-width: 34ch; margin: 0 auto;
+  color: var(--cream);
+  text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+}
+
+/* ══ CTA ═════════════════════════════════════════════════════ */
+.cta {
+  background: var(--sindoor); color: var(--cream);
+  padding: 9rem 0; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta .om-large {
+  font-family: var(--font-sacred); font-size: 64px; color: var(--cream);
+  line-height: 1; display: inline-block; margin-bottom: 1.8rem;
+  animation: floatUp 4.5s ease-in-out infinite;
+}
+.cta .eyebrow { color: var(--marigold); }
+.cta h2 {
+  font-family: var(--font-literary); font-style: italic;
+  font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.18; color: var(--cream);
+  max-width: 22ch; margin: 0 auto 2rem;
+}
+.cta p {
+  max-width: 56ch; margin: 0 auto 1.2rem;
+  font-size: 1.08rem; color: rgba(246,233,210,0.92); line-height: 1.85;
+}
+.cta-button {
+  display: inline-flex; align-items: center; gap: 1rem;
+  font-family: var(--font-label); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--sindoor); background: var(--cream);
+  padding: 1.3rem 2.6rem; border-radius: 999px;
+  transition: all .4s cubic-bezier(.2,.7,.2,1); position: relative;
+}
+.cta-button::after { content: '\2192'; font-family: var(--font-literary); font-size: 18px; transition: transform .4s ease; }
+.cta-button:hover {
+  background: var(--sindoor-d); color: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(140,31,18,0.4);
+}
+.cta-button:hover::after { transform: translateX(6px); }
+.cta-foot {
+  margin-top: 3rem;
+  font-family: var(--font-label); font-size: 9px;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: rgba(246,233,210,0.55);
+}
+.cta-foot .moon { font-size: 13px; }
+
+/* ══ FOOTER ══════════════════════════════════════════════════ */
+.site-foot {
+  background: var(--cream);
+  padding: 3rem 0 2.5rem;
+  text-align: center;
+  border-top: 0.5px solid rgba(201,48,30,0.18);
+}
+.site-foot .foot-line {
+  font-family: var(--font-label); font-size: 9px;
+  letter-spacing: 0.36em; text-transform: uppercase;
+  color: rgba(140,31,18,0.55); line-height: 2;
+}
+.site-foot .gold-rule {
+  width: 56px; height: 0.5px;
+  background: var(--marigold); opacity: 0.7;
+  margin: 0 auto 1.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal-fade { opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="tristana" viewBox="0 0 38 11">
+      <circle cx="2.2"  cy="5.5" r="2.2" fill="currentColor"/>
+      <circle cx="13.4" cy="5.5" r="3.4" fill="currentColor"/>
+      <circle cx="19"   cy="5.5" r="3.4" fill="currentColor"/>
+      <circle cx="24.6" cy="5.5" r="3.4" fill="currentColor"/>
+      <circle cx="35.8" cy="5.5" r="2.2" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav" id="topnav">
+  <div class="nav-mark">
+    <span class="om">&#x950;</span>
+    <span>
+      <span class="word">BRAHMAMA</span>
+      <span class="sub">Julia Grant Scott</span>
+    </span>
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Invitation</a>
+    <a href="#philosophy">Spirit</a>
+    <a href="#schedule">Programme</a>
+    <a href="#facilitator">Teachers</a>
+    <a href="#cta">Reserve</a>
+  </div>
+  <a class="nav-cta" href="#cta">☽ Reserve</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow hero-load d1">
+      <span class="om">&#x950;</span> Joie de Vivre · A Paris Yoga Immersion
+    </div>
+    <h1 class="hero-title hero-load d2">
+      Experience yourself — <em>grounded, spacious, joyful,</em> and <em>fully alive.</em>
+    </h1>
+    <div class="sindoor-rule hero-load d3"></div>
+    <div class="hero-meta hero-load d4">
+      <span>~ 1–4 October 2026</span>
+    </div>
+    <div class="hero-dots hero-load d5" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="hero-meta hero-load d5" style="margin-top: 1.4rem;">
+      Shala 33 &nbsp;·&nbsp; Montreuil &nbsp;·&nbsp; Paris
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="main-img img-placeholder" data-label="Hero image — Paris in autumn / Shala 33 / golden-hour practice" style="height: 100%;"></div>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="overview" id="overview">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div class="eyebrow-col reveal">
+        <div class="eyebrow">§ 02 · The Invitation</div>
+        <h2 class="section-title">The immersion,<br><em>in essence.</em></h2>
+        <div class="sindoor-rule"></div>
+      </div>
+      <div class="overview-body reveal delay-1">
+        <p style="margin-bottom: 1.4rem;">
+          Paris. October. The city is golden and the air has that particular quality it
+          only gets in autumn — crisp, alive, full of possibility. What better place, and
+          what better moment, to remember what your practice is really for.
+        </p>
+        <p>
+          <strong>Joie de Vivre</strong> is a four-day yoga immersion at the beautiful
+          Shala 33 in Montreuil — a space held by artist and teacher Helen Eastwood,
+          where devotion and joy live side by side. Together, Julia and Helen will guide
+          you through Ashtanga Vinyasa Yoga, Sanskrit chanting, sound meditation, and
+          talks on self-realization — all woven together with a distinctly Parisian
+          spirit: deep, alive, a little playful, and utterly beautiful.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY DETAILS -->
+<section class="key-details">
+  <div class="wrap">
+    <div class="kd-grid reveal">
+      <div class="kd-cell">
+        <div class="kd-label">Event</div>
+        <div class="kd-value">Joie de Vivre<em>Ashtanga · Sound · Self-Realization</em></div>
+      </div>
+      <div class="kd-cell">
+        <div class="kd-label">Venue</div>
+        <div class="kd-value">Shala 33<em>Montreuil · Paris · France</em></div>
+      </div>
+      <div class="kd-cell">
+        <div class="kd-label">Dates</div>
+        <div class="kd-value">1–4 October 2026<em>Wednesday → Saturday</em></div>
+      </div>
+      <div class="kd-cell">
+        <div class="kd-label">Investment</div>
+        <div class="kd-value">€250 – €300<em>sliding scale · pay what feels aligned</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE -->
+<section class="venue-hero" id="venue">
+  <div class="img-placeholder" data-label="Venue — Shala 33, Montreuil, Paris&#10;Warm, artistic, intimate practice space"></div>
+  <div class="venue-overlay reveal-fade">
+    <h2>A practice space where devotion and joy live side by side — held with warmth in the heart of Montreuil.</h2>
+    <div class="place">Shala 33 · Montreuil</div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+
+  <div class="philosophy-intro">
+    <div class="wrap-narrow">
+      <div class="reveal">
+        <div class="eyebrow">§ 05 · The 'Why'</div>
+        <h2 class="section-title" style="margin-bottom: 0;">Structure. Devotion. Joy.<br><em>In Paris.</em></h2>
+        <div class="sindoor-rule"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bridge image — Parisian autumn / candlelit shala -->
+  <div class="sutra-bridge">
+    <div class="img-placeholder dark" data-label="Bridge image — Parisian autumn / candlelit chanting at Shala 33"></div>
+    <div class="sutra-content">
+      <div class="reveal-scale"><div class="sutra-marker">— Chandogya Upaniṣad —</div></div>
+      <div class="reveal-scale delay-1"><div class="sutra-sanskrit">"The little space within the heart is as great as the vast universe."</div></div>
+      <div class="reveal-scale delay-2"><div class="sutra-rule"></div></div>
+      <div class="reveal-scale delay-3"><div class="sutra-translit">svāgatam · welcome, all</div></div>
+    </div>
+  </div>
+
+  <!-- Panel 01: text left, photo right -->
+  <div class="phil-split">
+    <div class="phil-split-text reveal-left">
+      <div class="phil-split-text-inner">
+        <span class="panel-num">01 · The Practice</span>
+        <h3>Ashtanga Vinyasa Yoga — powerful, precise, and <em>meant to be joyful.</em></h3>
+        <div class="sindoor-rule"></div>
+        <p>
+          Here is what we know about Ashtanga Vinyasa Yoga: it is one of the most powerful,
+          precise, and transformative practices in the world.
+        </p>
+        <p>
+          And here is what we sometimes forget: it is also meant to be joyful.
+        </p>
+      </div>
+    </div>
+    <div class="phil-split-photo reveal-scale delay-1">
+      <div class="img-placeholder" data-label="Practice — Ashtanga Vinyasa class at Shala 33"></div>
+    </div>
+  </div>
+
+  <!-- Panel 02: photo left, text right -->
+  <div class="phil-split flip">
+    <div class="phil-split-text reveal-right">
+      <div class="phil-split-text-inner">
+        <span class="panel-num">02 · The Invitation</span>
+        <h3>Held as <em>sacred</em> — and held <em>lightly.</em></h3>
+        <div class="sindoor-rule"></div>
+        <p>
+          This immersion is an invitation to hold your practice as the most sacred thing —
+          and at the same time, to hold it lightly. To bring full devotion without rigidity.
+          Full structure without losing the breath of life inside it.
+        </p>
+        <p>
+          To practice with the kind of ease that only comes when you stop trying to be
+          perfect and start allowing yourself to be present.
+        </p>
+      </div>
+    </div>
+    <div class="phil-split-photo reveal-scale delay-1">
+      <div class="img-placeholder" data-label="Devotion — Sanskrit chanting / mantra in the shala"></div>
+    </div>
+  </div>
+
+  <!-- Panel 03: text left, photo right -->
+  <div class="phil-split">
+    <div class="phil-split-text reveal-left">
+      <div class="phil-split-text-inner">
+        <span class="panel-num">03 · The Spirit</span>
+        <h3>To truly <em>live</em> your practice — not perform it.</h3>
+        <div class="sindoor-rule"></div>
+        <p>
+          Through yoga, mantra, sound, and conversation, we will explore what it means to
+          truly live your practice — to let it work on you from the inside out. To make
+          it yours. To make it alive.
+        </p>
+        <p>
+          Structure. Devotion. Joy. In Paris. What else could you need?
+        </p>
+      </div>
+    </div>
+    <div class="phil-split-photo reveal-scale delay-1">
+      <div class="img-placeholder" data-label="Spirit — Parisian autumn / golden light / a moment of joy"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- INCLUDED -->
+<section class="included" id="included">
+  <div class="included-head reveal">
+    <div class="eyebrow">§ 06 · The Offering</div>
+    <h2 class="section-title">What's <em>included.</em></h2>
+    <div class="sindoor-rule"></div>
+    <p class="included-sub">Over four days at Shala 33, you'll receive:</p>
+  </div>
+
+  <div class="collage reveal delay-1">
+    <a class="tile t01" href="#schedule">
+      <div class="img-placeholder" data-label="Daily Ashtanga"></div>
+      <div class="label"><span class="num">01</span><span class="title">Daily Ashtanga Vinyasa Yoga · counted, half-counted, guided</span></div>
+    </a>
+    <a class="tile t02" href="#schedule">
+      <div class="img-placeholder" data-label="Mantra"></div>
+      <div class="label"><span class="num">02</span><span class="title">Sanskrit Chanting &amp; Mantra · live and devotional</span></div>
+    </a>
+    <a class="tile t03" href="#schedule">
+      <div class="img-placeholder" data-label="Sound journey"></div>
+      <div class="label"><span class="num">03</span><span class="title">Sound Meditation Journey</span></div>
+    </a>
+    <a class="tile t04" href="#schedule">
+      <div class="img-placeholder" data-label="Self-realization"></div>
+      <div class="label"><span class="num">04</span><span class="title">Talks on Self-Realization &amp; True Nature</span></div>
+    </a>
+    <a class="tile t05" href="#schedule">
+      <div class="img-placeholder" data-label="Discussion"></div>
+      <div class="label"><span class="num">05</span><span class="title">Discussion · Practice as a Living, Breathing Experience</span></div>
+    </a>
+    <a class="tile t06" href="#schedule">
+      <div class="img-placeholder" data-label="Opening"></div>
+      <div class="label"><span class="num">06</span><span class="title">Opening Evening · Sound &amp; Gentle Practice</span></div>
+    </a>
+    <a class="tile t07" href="#schedule">
+      <div class="img-placeholder" data-label="Closing"></div>
+      <div class="label"><span class="num">07</span><span class="title">Closing Morning · Spacious &amp; Integrative</span></div>
+    </a>
+  </div>
+
+  <div class="not-included reveal delay-2" style="text-align: center; margin: 2.6rem auto 0; font-family: var(--font-literary); font-style: italic; font-size: 0.95rem; color: rgba(140,31,18,0.55);">
+    <strong style="font-family: var(--font-label); font-size: 9px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: var(--sindoor); font-style: normal; margin-right: 0.6rem;">Not included</strong>
+    Travel · Accommodation in Paris · Meals
+  </div>
+</section>
+
+<!-- LOGISTICS -->
+<section class="logistics">
+  <div class="wrap">
+    <div class="log-cell reveal">
+      <div class="log-label">Dates</div>
+      <div class="log-value">1–4 October 2026<em>Wednesday → Saturday · 4 days</em></div>
+    </div>
+    <div class="log-cell reveal delay-1">
+      <div class="log-label">Venue</div>
+      <div class="log-value">Shala 33<em>Montreuil · Paris · France</em></div>
+    </div>
+    <div class="log-cell reveal delay-2">
+      <div class="log-label">Cost</div>
+      <div class="log-value">€250 – €300<em>sliding scale · pay what feels aligned</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="schedule">
+  <div class="wrap">
+    <div class="schedule-intro reveal">
+      <div class="eyebrow">§ 08 · The Programme</div>
+      <h2 class="section-title">The unfolding,<br><em>day by day.</em></h2>
+      <div class="sindoor-rule" style="margin-left: auto; margin-right: auto;"></div>
+    </div>
+
+    <div class="day-grid">
+      <article class="day-card reveal">
+        <div class="day-num">Day 01 · Wednesday, 1 October</div>
+        <div class="day-name">Evening Arrival</div>
+        <div class="day-tag">A soft landing — into Paris, the space, and each other.</div>
+        <ul>
+          <li><span class="time">18:00</span><span class="activity">Opening Session · Sound Meditation or Gentle Practice</span></li>
+          <li><span class="time">Evening</span><span class="activity">Welcome &amp; Sangha</span></li>
+        </ul>
+      </article>
+
+      <article class="day-card reveal delay-1">
+        <div class="day-num">Day 02 · Thursday, 2 October</div>
+        <div class="day-name">Foundation</div>
+        <div class="day-tag">Structure laid — the breath returns.</div>
+        <ul>
+          <li><span class="time">Morning</span><span class="activity">Ashtanga Vinyasa Yoga · Practice</span></li>
+          <li><span class="time">18:00</span><span class="activity">Self-Realization Talk &amp; Sound Session</span></li>
+        </ul>
+      </article>
+
+      <article class="day-card reveal">
+        <div class="day-num">Day 03 · Friday, 3 October</div>
+        <div class="day-name">Devotion</div>
+        <div class="day-tag">Mantra, sound, and the heart's true nature.</div>
+        <ul>
+          <li><span class="time">Morning</span><span class="activity">Ashtanga Vinyasa Yoga · Practice</span></li>
+          <li><span class="time">Afternoon</span><span class="activity">Mantra · Sanskrit Chanting · Sound</span></li>
+          <li><span class="time">Evening</span><span class="activity">Talk · Coming Back to True Nature</span></li>
+        </ul>
+      </article>
+
+      <article class="day-card reveal delay-1">
+        <div class="day-num">Day 04 · Saturday, 4 October</div>
+        <div class="day-name">Closing</div>
+        <div class="day-tag">Carry it forward · au revoir Paris.</div>
+        <ul>
+          <li><span class="time">Morning</span><span class="activity">Final Ashtanga Vinyasa Yoga Class</span></li>
+          <li><span class="time">Late Morning</span><span class="activity">Closing Circle · Integration</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITATOR — JULIA -->
+<section class="facilitator" id="facilitator">
+  <div class="wrap">
+    <div class="facil-grid">
+      <div class="facil-photo-col reveal">
+        <div class="facil-photo-wrap">
+          <div class="facil-photo">
+            <div class="img-placeholder" data-label="Photo — Julia Grant-Scott&#10;warm, natural, in practice or sacred space"></div>
+          </div>
+        </div>
+      </div>
+      <div class="facil-bio reveal delay-1">
+        <div class="eyebrow">§ 09 · Held by</div>
+        <h2 class="section-title">Julia<br><em>Grant-Scott.</em></h2>
+        <div class="sindoor-rule"></div>
+
+        <p>
+          Julia Grant-Scott is a sound and embodiment artist, Ashtanga Vinyasa Yoga teacher,
+          and guide in self-realization. Originally from Kazakhstan, her journey weaves
+          together yoga, breathwork, sound, and the wisdom of Vedanta — each one deepening
+          her relationship with life and with practice.
+        </p>
+        <p>
+          She teaches not to instruct, but to remind — that the practice is always a path
+          back to the Self. Julia is lovingly called <strong>Brahmama</strong>, inspired by
+          <em>Nāda Brahma</em> — "Sound is God, and God is Sound."
+        </p>
+        <p class="lead-quote">
+          Julia's work is for those who are ready to listen — not just with their ears, but
+          with their whole being.
+        </p>
+        <div class="brahmama-mark">
+          <span class="om">&#x950;</span> · BRAHMAMA · <svg class="tristana" width="42" height="11" style="color: var(--sindoor);"><use href="#tristana"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="facilitator-divider">
+  <span class="ornament">·  ·  ·</span>
+</div>
+
+<!-- FACILITATOR — HELEN -->
+<section class="facilitator">
+  <div class="wrap">
+    <div class="facil-grid flip">
+      <div class="facil-bio reveal">
+        <div class="eyebrow">§ 09 · Held by</div>
+        <h2 class="section-title">Helen<br><em>Eastwood.</em></h2>
+        <div class="sindoor-rule"></div>
+
+        <p>
+          Helen Eastwood is a Paris-based yoga teacher, artist, and the warm-hearted
+          keeper of <strong>Shala 33</strong> in Montreuil. Rooted in the Ashtanga
+          Vinyasa tradition and deeply influenced by teachers who showed her how
+          uplifting it is to practice with music and presence, Helen's teaching is
+          flowing, devotional, and full of life.
+        </p>
+        <p>
+          Her classes weave together pranayama, chanting, and movement — guided always by
+          the Sanskrit invitation she places at the heart of her shala: <em>svāgatam</em>
+          — welcome, all.
+        </p>
+        <p class="lead-quote">
+          "The little space within the heart is as great as the vast universe." — Chandogya Upaniṣad
+        </p>
+        <div class="brahmama-mark">
+          <span class="om">&#x950;</span> · SHALA 33 · MONTREUIL
+        </div>
+      </div>
+      <div class="facil-photo-col reveal delay-1">
+        <div class="facil-photo-wrap">
+          <div class="facil-photo">
+            <div class="img-placeholder" data-label="Photo — Helen Eastwood&#10;in the shala or teaching&#10;source: heleneastwoodyoga.com"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING IMAGE -->
+<section class="closing-image">
+  <div class="img-placeholder dark" data-label="Closing image — the sangha at Shala 33 / a Parisian street in autumn"></div>
+  <div class="closing-overlay reveal-fade">
+    <div class="eyebrow">·●●●·  La Sangha  ·●●●·</div>
+    <h2>What gathers here is rare. We hold space for those who come fully — and a little playfully.</h2>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="wrap-narrow" style="position: relative; z-index: 2;">
+    <div class="reveal"><div class="om-large">&#x950;</div></div>
+    <div class="reveal delay-1"><div class="eyebrow">§ 10 · The Invitation</div></div>
+    <div class="reveal delay-2"><h2>Ready to feel <em>alive</em> in Paris?</h2></div>
+    <div class="reveal delay-3">
+      <p>
+        Joie de Vivre is for those who love their practice deeply — and are ready to love
+        it a little more lightly too. For those who want to go deeper into the philosophy,
+        the sound, and the self.
+      </p>
+      <p style="margin-bottom: 2rem;">
+        For those who know that Paris in October is never a bad idea.
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong style="color: var(--marigold); font-style: normal;">Investment: €250 – €300 sliding scale.</strong>
+        Pay what feels aligned with where you are. Click below to reserve your place.
+      </p>
+    </div>
+    <div class="reveal delay-4" style="margin-top: 3rem;">
+      <a class="cta-button" href="#" id="bookButton">☽ Reserve Your Place</a>
+    </div>
+    <div class="reveal delay-5">
+      <div class="cta-foot"><span class="moon">☽</span> &nbsp; €250 – €300 · Stripe checkout to follow</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap-narrow">
+    <div class="gold-rule"></div>
+    <div class="foot-line">
+      Joie de Vivre &nbsp;·&nbsp; Julia Grant-Scott &amp; Helen Eastwood
+    </div>
+    <div class="foot-line">
+      Shala 33 &nbsp;·&nbsp; Montreuil &nbsp;·&nbsp; Paris &nbsp;·&nbsp; 1–4 October 2026
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal, .reveal-fade, .reveal-left, .reveal-right, .reveal-scale').forEach(el => io.observe(el));
+
+const navEl = document.getElementById('topnav');
+const onScroll = () => {
+  if (window.scrollY > 30) navEl.classList.add('scrolled');
+  else navEl.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+document.getElementById('bookButton').addEventListener('click', (e) => {
+  e.preventDefault();
+  e.target.style.transform = 'translateY(-2px) scale(0.98)';
+  setTimeout(() => { e.target.style.transform = ''; }, 200);
+});
+</script>
+
+</body>
+</html>
