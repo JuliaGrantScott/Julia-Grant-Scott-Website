@@ -1,0 +1,6 @@
+# macOS finder metadata
+.DS_Store
+**/.DS_Store
+
+# Local reference docs — kept on disk, not deployed
+BRAHMAMA_Brand_Guidelines.html
