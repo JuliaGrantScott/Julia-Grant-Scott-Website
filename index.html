@@ -480,6 +480,8 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   padding: 13px 28px;
   text-decoration: none;
   transition: background 0.35s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-sindoor:hover { background: var(--sindoor-d); }
@@ -1124,6 +1126,26 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   opacity: 0.55;
 }
 
+.sangha-cta {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 0.5px solid rgba(201,48,30,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.sangha-cta-quote {
+  font-family: var(--font-literary);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+  opacity: 0.6;
+  margin: 0;
+}
+
 /* ══ BOOK (CONTACT) ══════════════════════════════════════════ */
 .book-section {
   padding: 8rem 6rem;
@@ -1182,6 +1204,15 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   flex-shrink: 0;
 }
 
+.contact-link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(201,48,30,0.25);
+  padding-bottom: 1px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.contact-link:hover { color: var(--sindoor); border-color: var(--sindoor); }
+
 /* Form */
 .book-form { background: var(--cream); padding: 3.5rem; }
 
@@ -1224,6 +1255,12 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 
 .form-input::placeholder { color: var(--ink); opacity: 0.3; }
 .form-input:focus, .form-select:focus { border-color: var(--sindoor); }
+
+.form-textarea {
+  resize: vertical;
+  min-height: 60px;
+  line-height: 1.6;
+}
 
 .form-submit { display: block; width: 100%; text-align: center; margin-top: 2.5rem; }
 
@@ -1531,6 +1568,13 @@ footer {
   .sangha-grid { grid-template-columns: 1fr; gap: 0; }
   .testimonial { padding: 2rem 0 1.4rem; }
   .testimonial-text { font-size: 1rem; line-height: 1.75; }
+  .sangha-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
 
   /* Book / form — stack */
   .book-section {
@@ -1587,7 +1631,7 @@ footer {
 
 </style>
 </head>
-<body>
+<body id="top">
 
 <a href="#main" class="skip-link">Skip to content</a>
 
@@ -1595,7 +1639,7 @@ footer {
 <nav aria-label="Primary">
 
   <!-- Logo — left -->
-  <a href="#" class="nav-logo">
+  <a href="#top" class="nav-logo" aria-label="BRAHMAMA — back to top">
     <div class="nav-om">
       <svg viewBox="-22 -22 44 44" xmlns="http://www.w3.org/2000/svg">
         <circle cx="0"   cy="0"   r="12" fill="none" stroke="#C9301E" stroke-width="0.55"/>
@@ -2007,6 +2051,11 @@ footer {
       <p class="testimonial-author">— Retreat participant, Andalusia 2025</p>
     </div>
   </div>
+
+  <div class="sangha-cta">
+    <p class="sangha-cta-quote">Add your name to the next circle.</p>
+    <a href="#yatra" class="btn-sindoor">☽ See 2026 Retreats</a>
+  </div>
 </section>
 
 <!-- ══ BOOK ═══════════════════════════════════════════════════ -->
@@ -2018,26 +2067,36 @@ footer {
     <p class="book-body">Every retreat, every session, every moment of sound begins from the same place: you are already whole. Reach out to enquire about an upcoming retreat, a 1:1 session, or to simply begin a conversation.</p>
     <p class="book-quote">"I share this not so you carry my story, but so you remember your own."</p>
     <div class="book-contacts">
-      <div class="contact-row"><span class="contact-label">Instagram</span><span>@julia_scott_brahmama</span></div>
-      <div class="contact-row"><span class="contact-label">Etsy</span><span>THANKYOUMOTHERritual</span></div>
+      <div class="contact-row"><span class="contact-label">Instagram</span><a href="https://www.instagram.com/julia_scott_brahmama/" target="_blank" rel="noopener" class="contact-link">@julia_scott_brahmama</a></div>
+      <div class="contact-row"><span class="contact-label">Etsy</span><a href="https://www.etsy.com/shop/THANKYOUMOTHERritual" target="_blank" rel="noopener" class="contact-link">THANKYOUMOTHERritual</a></div>
+      <div class="contact-row"><span class="contact-label">Email</span><a href="mailto:julabye@gmail.com" class="contact-link">julabye@gmail.com</a></div>
       <div class="contact-row"><span class="contact-label">Website</span><span>juliagrantscott.com</span></div>
     </div>
   </div>
 
-  <div class="book-form">
+  <form class="book-form" id="enquiry-form" novalidate>
     <p class="form-title">Send a Message</p>
     <div class="form-group">
-      <label class="form-label">Your Name</label>
-      <input type="text" class="form-input" placeholder="Enter your name">
+      <label class="form-label" for="enq-name">Your Name</label>
+      <input type="text" id="enq-name" name="visitorName" class="form-input" placeholder="Enter your name" autocomplete="name" required>
     </div>
     <div class="form-group">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-input" placeholder="your@email.com">
+      <label class="form-label" for="enq-email">Email</label>
+      <input type="email" id="enq-email" name="visitorEmail" class="form-input" placeholder="your@email.com" autocomplete="email" required>
     </div>
     <div class="form-group">
-      <label class="form-label">I am interested in</label>
-      <select class="form-select">
-        <option>A 2026 Retreat</option>
+      <label class="form-label" for="enq-interest">I am interested in</label>
+      <select id="enq-interest" name="interest" class="form-select" required>
+        <optgroup label="2026 Retreats">
+          <option>Tierra Cosmica · Spain · June</option>
+          <option>Colibri Festival · Spain · June–July</option>
+          <option>Alpine Silence · Switzerland · July–August</option>
+          <option>Return to Roots · Poland · Late August</option>
+          <option>Coming Home · Freiburg · 28–30 August</option>
+          <option>Sea &amp; Silence · Sardinia · September</option>
+          <option>One More Offering · Poland · October</option>
+          <option>Paris with Helen · France · Oct–Dec</option>
+        </optgroup>
         <option>Sound Healing Session</option>
         <option>1:1 Guidance</option>
         <option>Online Offerings</option>
@@ -2045,12 +2104,12 @@ footer {
       </select>
     </div>
     <div class="form-group">
-      <label class="form-label">Your Message</label>
-      <input type="text" class="form-input" placeholder="What is calling you here?">
+      <label class="form-label" for="enq-message">Your Message</label>
+      <textarea id="enq-message" name="message" class="form-input form-textarea" rows="3" placeholder="What is calling you here?"></textarea>
     </div>
-    <a href="#" class="btn-sindoor form-submit">Send</a>
-    <p class="form-note">Spaces are limited &nbsp;·&nbsp; All retreats are filled with love</p>
-  </div>
+    <button type="submit" class="btn-sindoor form-submit">Send</button>
+    <p class="form-note">Opens in your email app · Spaces are limited · All retreats are filled with love</p>
+  </form>
 </section>
 
 </main>
@@ -2116,17 +2175,17 @@ footer {
         <li><a href="#sound">Sound & Nāda</a></li>
         <li><a href="#practice">Breathwork</a></li>
         <li><a href="#practice">Self-Realisation</a></li>
-        <li><a href="#">1:1 Sessions</a></li>
+        <li><a href="#book">1:1 Sessions</a></li>
       </ul>
     </div>
 
     <div>
       <p class="footer-col-title">Connect</p>
       <ul class="footer-links">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Etsy Shop</a></li>
+        <li><a href="https://www.instagram.com/julia_scott_brahmama/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.etsy.com/shop/THANKYOUMOTHERritual" target="_blank" rel="noopener">Etsy Shop</a></li>
+        <li><a href="mailto:julabye@gmail.com">Email Julia</a></li>
         <li><a href="#book">☽ Book a Retreat</a></li>
-        <li><a href="#">Newsletter</a></li>
       </ul>
     </div>
 
@@ -2135,8 +2194,8 @@ footer {
   <div class="footer-bottom">
     <p class="footer-copy">© 2026 Julia Grant-Scott · BRAHMAMA · juliagrantscott.com · All rights reserved</p>
     <div class="footer-social">
-      <a href="#">@julia_scott_brahmama</a>
-      <a href="#">THANKYOUMOTHERritual</a>
+      <a href="https://www.instagram.com/julia_scott_brahmama/" target="_blank" rel="noopener">@julia_scott_brahmama</a>
+      <a href="https://www.etsy.com/shop/THANKYOUMOTHERritual" target="_blank" rel="noopener">THANKYOUMOTHERritual</a>
     </div>
   </div>
 </footer>
@@ -2176,6 +2235,45 @@ footer {
   // Close drawer if window resizes back to desktop
   window.addEventListener('resize', function() {
     if (window.innerWidth > 768 && body.classList.contains('nav-open')) setOpen(false);
+  });
+})();
+
+/* ══ Enquiry form → mailto: ══════════════════════════════════
+   No backend, no service. The form composes a pre-filled email
+   in the visitor's default mail app addressed to Julia.
+   To change the recipient, edit RECIPIENT below.
+   ═════════════════════════════════════════════════════════════ */
+(function() {
+  const RECIPIENT = 'julabye@gmail.com';
+  const form = document.getElementById('enquiry-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name     = (document.getElementById('enq-name').value     || '').trim();
+    const email    = (document.getElementById('enq-email').value    || '').trim();
+    const interest = (document.getElementById('enq-interest').value || '').trim();
+    const message  = (document.getElementById('enq-message').value  || '').trim();
+
+    // Light client-side validation
+    if (!name || !email) {
+      alert('Please fill in your name and email so I can reply.');
+      return;
+    }
+
+    const subject = 'BRAHMAMA enquiry · ' + (interest || 'General');
+    const body    =
+      'Name: '     + name     + '\n' +
+      'Email: '    + email    + '\n' +
+      'Interest: ' + interest + '\n\n' +
+      'Message:\n' + (message || '(no message)') + '\n\n' +
+      '— Sent from juliagrantscott.com';
+
+    window.location.href =
+      'mailto:' + RECIPIENT +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body='    + encodeURIComponent(body);
   });
 })();
 
