@@ -2,14 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRAHMAMA · Julia Grant-Scott</title>
-  <link rel="icon" href="favicon/favicon.ico" sizes="any">
-  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FBF1DC">
+<title>BRAHMAMA · Julia Grant-Scott — Yoga, Sound, Breathwork & Self-Realization</title>
+<meta name="description" content="Julia Grant-Scott (BRAHMAMA) holds yoga, sound, breathwork, and self-realization retreats across Europe — Spain, Switzerland, Italy, Poland, France. The lotus grows from the mud.">
+<link rel="canonical" href="https://www.juliagrantscott.com/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.juliagrantscott.com/">
+<meta property="og:title" content="BRAHMAMA · Julia Grant-Scott">
+<meta property="og:description" content="Yoga · Sound · Breathwork · Self-Realization. Sacred retreats across Europe.">
+<meta property="og:site_name" content="BRAHMAMA">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BRAHMAMA · Julia Grant-Scott">
+<meta name="twitter:description" content="Yoga · Sound · Breathwork · Self-Realization. Sacred retreats across Europe.">
+
+<link rel="icon" href="favicon/favicon.ico" sizes="any">
+<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Julia Grant-Scott",
+  "alternateName": "BRAHMAMA",
+  "jobTitle": "Yoga, Sound & Breathwork Teacher",
+  "url": "https://www.juliagrantscott.com/",
+  "sameAs": [
+    "https://www.instagram.com/julia_scott_brahmama/"
+  ],
+  "knowsAbout": ["Ashtanga Vinyasa Yoga","Nada Yoga","Mantra","Pranayama","Breathwork","Vedanta","Self-Realization"]
+}
+</script>
 <style>
 
 /* ══ TOKENS ══════════════════════════════════════════════════ */
@@ -29,7 +60,8 @@
 
 /* ══ RESET ══════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+img, svg, video { max-width: 100%; height: auto; }
 
 body {
   background: var(--cream);
@@ -59,6 +91,27 @@ body::before {
 .d3  { animation-delay: 0.6s; }  .d4 { animation-delay: 0.8s; }
 .d5  { animation-delay: 1.0s; }  .d6 { animation-delay: 1.2s; }
 .d7  { animation-delay: 1.4s; }
+
+/* Reduced-motion: no animations, content visible immediately */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .fu { opacity: 1 !important; transform: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--ink); color: var(--cream);
+  padding: 12px 18px; z-index: 10000;
+  font-family: var(--font-label); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+}
+.skip-link:focus { left: 16px; top: 16px; }
+
+/* Visible focus outlines for keyboard nav */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--sindoor); outline-offset: 3px; border-radius: 2px;
+}
 
 /* ══ REUSABLE ════════════════════════════════════════════════ */
 .eyebrow {
@@ -189,19 +242,110 @@ nav {
 
 .nav-book {
   font-family: var(--font-label);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 400;
   letter-spacing: 0.36em;
   text-transform: uppercase;
   color: var(--sindoor);
   border: 0.5px solid var(--sindoor);
   border-radius: 999px;
-  padding: 9px 20px;
+  padding: 11px 22px;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
 }
 
 .nav-book:hover { background: var(--sindoor); color: var(--cream); }
+
+/* Hamburger toggle — hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0.5px solid rgba(201,48,30,0.4);
+  border-radius: 999px;
+  width: 44px; height: 44px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: var(--sindoor);
+  position: relative;
+  z-index: 220;
+}
+.nav-toggle:focus-visible { outline: 2px solid var(--sindoor); outline-offset: 3px; }
+.nav-toggle .bars,
+.nav-toggle .bars::before,
+.nav-toggle .bars::after {
+  display: block;
+  width: 18px; height: 1px;
+  background: var(--sindoor);
+  transition: transform 0.3s, opacity 0.3s, top 0.3s;
+}
+.nav-toggle .bars { position: relative; }
+.nav-toggle .bars::before,
+.nav-toggle .bars::after {
+  content: ''; position: absolute; left: 0;
+}
+.nav-toggle .bars::before { top: -6px; }
+.nav-toggle .bars::after  { top:  6px; }
+
+/* Open state */
+body.nav-open .nav-toggle .bars { background: transparent; }
+body.nav-open .nav-toggle .bars::before { top: 0; transform: rotate(45deg); }
+body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
+
+/* Mobile drawer */
+.nav-drawer {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--paper);
+  z-index: 210;
+  display: none;
+  flex-direction: column;
+  padding: 96px 2rem 3rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+.nav-drawer ul a {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 1rem 0.25rem;
+  border-bottom: 0.5px solid rgba(201,48,30,0.14);
+  transition: color 0.3s;
+}
+.nav-drawer ul a:active,
+.nav-drawer ul a:hover { color: var(--sindoor); }
+.nav-drawer .nav-drawer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--sindoor);
+  padding: 16px 28px;
+  text-decoration: none;
+  margin-top: 1rem;
+  min-height: 48px;
+}
 
 /* ══ HERO ════════════════════════════════════════════════════ */
 .hero {
@@ -1208,12 +1352,215 @@ footer {
 
 .footer-social a:hover { color: var(--sindoor); }
 
+/* ══ RESPONSIVE ═════════════════════════════════════════════
+   Breakpoints:
+   • ≤1024px : tablet (hero stacks, retreat 2-col, etc.)
+   • ≤768px  : mobile nav becomes hamburger
+   • ≤480px  : tighter padding for small phones
+   ═════════════════════════════════════════════════════════ */
+
+/* Tablet (≤1024px) — relax desktop padding & some grids */
+@media (max-width: 1024px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { gap: 1.4rem; }
+  .nav-links a { font-size: 9px; letter-spacing: 0.22em; }
+
+  .hero-left  { padding: 5rem 3rem 4rem; }
+  .hero-portrait-area { padding: 2rem; }
+
+  .conviction { padding: 4rem 2.5rem; gap: 3rem; }
+
+  .yatra-section, .practice-section, .about-section,
+  .sound-section, .sangha-section, .book-section,
+  footer { padding-left: 2.5rem; padding-right: 2.5rem; }
+
+  .retreat-grid  { grid-template-columns: repeat(2, 1fr); }
+  .pillars-grid  { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .sangha-grid   { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+
+  .book-section  { gap: 4rem; }
+  .footer-grid   { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+
+/* Mobile (≤768px) — single column everywhere, hamburger nav */
+@media (max-width: 768px) {
+
+  /* Nav: hide desktop links + book, show hamburger */
+  nav {
+    grid-template-columns: 1fr auto;
+    padding: 0 1.1rem;
+    height: 64px;
+  }
+  .nav-links { display: none; }
+  .nav-right { display: none; }
+  .nav-toggle { display: inline-flex; }
+
+  /* Trim logo lockup so it fits */
+  .nav-om { width: 36px; height: 36px; font-size: 24px; }
+  .nav-brand-name { font-size: 10.5px; letter-spacing: 0.24em; }
+  .nav-subtitle { font-size: 8.5px; }
+  .nav-wordmark-text .tristana { width: 22px; height: 7px; }
+
+  /* Hero — stack vertically */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 64px;
+  }
+  .hero-left {
+    padding: 3rem 1.4rem 3rem;
+    text-align: left;
+  }
+  .hero-fol-bg { display: none; }
+  .hero-mark { gap: 12px; margin-bottom: 2rem; }
+  .hero-om-container { width: 78px; height: 78px; }
+  .hero-om-glyph { font-size: 50px; }
+  .hero-brand-name { font-size: 13px; letter-spacing: 0.26em; }
+  .hero-lead {
+    font-size: 1.05rem;
+    max-width: 100%;
+    padding-left: 1rem;
+    margin-bottom: 2.2rem;
+  }
+  .hero-tagline { letter-spacing: 0.32em; margin-bottom: 1.6rem; }
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .hero-ctas .btn-sindoor,
+  .hero-ctas .btn-outline {
+    text-align: center;
+    padding: 16px 22px;
+    font-size: 9px;
+    letter-spacing: 0.32em;
+  }
+  .hero-right {
+    min-height: 360px;
+    padding: 2rem 1rem;
+  }
+  .hero-right-fol svg { width: 460px; height: 460px; }
+  .portrait-block { width: 220px; height: 300px; }
+
+  /* Conviction band — stack quote above body */
+  .conviction {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.4rem;
+    gap: 1.8rem;
+  }
+  .conviction-quote { font-size: 1.4rem; line-height: 1.4; }
+  .conviction-attr { letter-spacing: 0.3em; margin-top: 1.2rem; }
+  .conviction-body { font-size: 14px; line-height: 1.85; }
+  .conviction-pillars { font-size: 7px; letter-spacing: 0.22em; line-height: 2; margin-top: 1.4rem; }
+
+  /* Yatra — stack header, 1-col cards */
+  .yatra-section,
+  .practice-section,
+  .sangha-section { padding: 4rem 1.4rem; }
+  .about-section  { padding: 5rem 1.4rem; }
+  .sound-section  { padding: 4.5rem 1.4rem; }
+  .book-section   { padding: 4rem 1.4rem; }
+
+  .yatra-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .yatra-meta { text-align: left; }
+  .retreat-grid { grid-template-columns: 1fr; gap: 1px; }
+  .retreat-card { padding: 2rem 1.4rem; }
+
+  .yatra-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  /* Pillars — 1 column */
+  .practice-header { margin-bottom: 2.5rem; }
+  .pillars-grid { grid-template-columns: 1fr; gap: 0; }
+  .pillar-item { padding: 2rem 0 1.4rem; }
+
+  /* About / bio — tighter padding */
+  .about-inner { padding: 0; }
+  .bio-lead { padding: 0 0.5rem; font-size: 1.05rem; margin-bottom: 2rem; }
+  .bio-body p { font-size: 14px; line-height: 1.9; }
+  .bio-body p.indent { padding-left: 1.2rem; font-size: 1rem; }
+  .bio-closing { padding: 2.4rem 1.4rem; margin-top: 2.5rem; }
+
+  /* Sound section rings — keep but smaller */
+  .sound-rings .sound-ring:nth-child(n+4) { display: none; }
+  .sound-title { font-size: 1.8rem; }
+
+  /* Sangha testimonials — 1 column */
+  .sangha-grid { grid-template-columns: 1fr; gap: 0; }
+  .testimonial { padding: 2rem 0 1.4rem; }
+  .testimonial-text { font-size: 1rem; line-height: 1.75; }
+
+  /* Book / form — stack */
+  .book-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .book-form { padding: 2rem 1.4rem; }
+  .form-input, .form-select {
+    font-size: 16px;     /* prevents iOS zoom-on-focus */
+    padding: 12px 0;
+  }
+  .form-label { font-size: 8px; }
+  .contact-row { flex-wrap: wrap; gap: 0.6rem; font-size: 13px; }
+  .contact-label { width: auto; }
+
+  /* Footer — stack columns */
+  footer { padding: 4rem 1.4rem 2rem; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    text-align: left;
+  }
+  .footer-social { gap: 1.2rem; flex-wrap: wrap; }
+  .footer-body { font-size: 13px; }
+
+  /* Larger tap targets for primary CTAs */
+  .btn-sindoor, .btn-outline {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-book { min-height: 44px; display: inline-flex; align-items: center; }
+  .rc-cta { padding: 8px 0; min-height: 32px; display: inline-block; }
+  .footer-links a { display: inline-block; padding: 4px 0; min-height: 32px; }
+  .bio-copy-btn { min-height: 48px; padding: 14px 30px; }
+}
+
+/* Small phones (≤480px) — final tightening */
+@media (max-width: 480px) {
+  .conviction-quote { font-size: 1.2rem; }
+  .section-title { font-size: 1.7rem; }
+  .sound-title { font-size: 1.6rem; }
+  .bio-name { letter-spacing: 0.12em; }
+  .hero-right { min-height: 300px; }
+  .portrait-block { width: 200px; height: 270px; }
+}
+
 </style>
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <!-- ══ NAV ══════════════════════════════════════════════════ -->
-<nav>
+<nav aria-label="Primary">
 
   <!-- Logo — left -->
   <a href="#" class="nav-logo">
@@ -1257,12 +1604,34 @@ footer {
     <li><a href="#about">About</a></li>
   </ul>
 
-  <!-- Book CTA — right -->
+  <!-- Book CTA — right (hidden on mobile) -->
   <div class="nav-right">
     <a href="#book" class="nav-book">☽ Book</a>
   </div>
 
+  <!-- Mobile hamburger (hidden on desktop) -->
+  <button class="nav-toggle" type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer">
+    <span class="bars" aria-hidden="true"></span>
+  </button>
+
 </nav>
+
+<!-- ══ MOBILE DRAWER ════════════════════════════════════════ -->
+<div class="nav-drawer" id="mobile-drawer" aria-label="Mobile navigation" hidden>
+  <ul>
+    <li><a href="#yatra">Yatra</a></li>
+    <li><a href="#sound">Sound</a></li>
+    <li><a href="#practice">Ceremony</a></li>
+    <li><a href="#sangha">Sangha</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#book" class="nav-drawer-cta">☽ Book</a>
+</div>
+
+<main id="main">
 
 <!-- ══ HERO ═════════════════════════════════════════════════ -->
 <section class="hero">
@@ -1639,6 +2008,8 @@ footer {
   </div>
 </section>
 
+</main>
+
 <!-- ══ FOOTER ═════════════════════════════════════════════════ -->
 <footer>
   <div class="footer-grid">
@@ -1726,6 +2097,43 @@ footer {
 </footer>
 
 <script>
+/* ══ Mobile nav toggle ═══════════════════════════════════════ */
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const body   = document.body;
+  if (!toggle || !drawer) return;
+
+  function setOpen(open) {
+    body.classList.toggle('nav-open', open);
+    drawer.classList.toggle('open', open);
+    drawer.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    // Lock background scroll while drawer is open
+    body.style.overflow = open ? 'hidden' : '';
+  }
+
+  toggle.addEventListener('click', function() {
+    setOpen(!body.classList.contains('nav-open'));
+  });
+
+  // Close drawer when any link inside it is clicked
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', function() { setOpen(false); });
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && body.classList.contains('nav-open')) setOpen(false);
+  });
+
+  // Close drawer if window resizes back to desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && body.classList.contains('nav-open')) setOpen(false);
+  });
+})();
+
 function copyBio() {
   const text = `JULIA GRANT-SCOTT
 Yoga · Sound · Breathwork · Self-Realization
