@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FBF1DC">
+<title>Privacy Policy · Julia Grant Scott · BRAHMAMA</title>
+<meta name="description" content="Privacy policy for Julia Grant Scott / BRAHMAMA — what information we collect, how we use it, and your rights.">
+<link rel="canonical" href="https://www.juliagrantscott.com/privacy-policy">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href="favicon/favicon.ico" sizes="any">
+<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:      #F6E9D2;
+  --paper:      #FBF1DC;
+  --sindoor:    #C9301E;
+  --sindoor-d:  #8C1F12;
+  --marigold:   #E8A02A;
+  --ink:        #2A1410;
+  --font-sacred:   'Tiro Devanagari Hindi', serif;
+  --font-literary: 'Cormorant Garamond', Georgia, serif;
+  --font-label:    'JetBrains Mono', 'Courier New', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-literary);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.85;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: 0.28;
+}
+a { color: var(--sindoor); text-decoration: none; border-bottom: 0.5px solid rgba(201,48,30,0.4); }
+a:hover { color: var(--sindoor-d); }
+
+/* Top nav (matches retreat page style) */
+nav.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(251, 241, 220, 0.92);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid rgba(201, 48, 30, 0.16);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 68px;
+}
+a.nav-mark {
+  display: flex; align-items: center; gap: 0.7rem;
+  text-decoration: none; border: none; color: inherit;
+}
+.nav-mark .om { font-family: var(--font-sacred); font-size: 24px; color: var(--sindoor); line-height: 1; }
+.nav-mark .word { font-family: var(--font-label); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; color: var(--sindoor); }
+.nav-mark .sub { font-family: var(--font-literary); font-style: italic; font-size: 10px; color: rgba(42,20,16,0.5); display: block; letter-spacing: 0.04em; }
+.nav-back {
+  font-family: var(--font-label); font-size: 9.5px; font-weight: 400;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--sindoor); text-decoration: none; border: 1px solid var(--sindoor);
+  padding: 8px 16px; border-radius: 999px;
+  transition: background .3s, color .3s;
+}
+.nav-back:hover { background: var(--sindoor); color: var(--cream); }
+
+@media (max-width: 600px) {
+  nav.topnav { padding: 0 1.1rem; height: 62px; }
+  .nav-mark .om { font-size: 22px; }
+  .nav-mark .word { font-size: 10px; }
+  .nav-mark .sub { font-size: 9px; }
+  .nav-back { padding: 8px 12px; font-size: 8.5px; letter-spacing: 0.26em; }
+}
+@media (max-width: 380px) {
+  .nav-mark .sub { display: none; }
+}
+
+/* Page layout */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 9rem 2rem 6rem;
+}
+
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--sindoor);
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+h1 {
+  font-family: var(--font-literary);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.005em;
+}
+
+.last-updated {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--sindoor);
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+.sindoor-rule {
+  width: 56px; height: 0.5px;
+  background: var(--sindoor); opacity: 0.45;
+  margin: 2rem 0 3rem;
+}
+
+h2 {
+  font-family: var(--font-literary);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 2.6rem 0 0.8rem;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-family: var(--font-literary);
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 1.6rem 0 0.5rem;
+}
+
+p, ul, ol { margin-bottom: 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li { margin-bottom: 0.5rem; }
+
+.legal-intro {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  opacity: 0.82;
+  border-left: 1.5px solid rgba(201,48,30,0.35);
+  padding-left: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* Footer (compact, mirrors main site footer style) */
+footer {
+  background: var(--sindoor);
+  padding: 3rem 2rem 2rem;
+  margin-top: 4rem;
+}
+.legal-footer-inner {
+  max-width: 760px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.legal-footer-inner a {
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(246,233,210,0.72);
+  text-decoration: none;
+  border: none;
+}
+.legal-footer-inner a:hover { color: var(--marigold); }
+.legal-footer-inner .copy {
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: rgba(246,233,210,0.55);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  main { padding: 7rem 1.4rem 4rem; }
+  .legal-footer-inner { justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="Primary">
+  <a class="nav-mark" href="index.html" aria-label="BRAHMAMA — home">
+    <span class="om">&#x950;</span>
+    <span>
+      <span class="word">BRAHMAMA</span>
+      <span class="sub">Julia Grant Scott</span>
+    </span>
+  </a>
+  <a class="nav-back" href="index.html">&larr; Home</a>
+</nav>
+
+<main>
+  <span class="eyebrow">Legal &nbsp;·&nbsp; Privacy</span>
+  <h1>Privacy Policy</h1>
+  <p class="last-updated">Last updated: 1 May 2026</p>
+  <div class="sindoor-rule" aria-hidden="true"></div>
+
+  <p class="legal-intro">
+    Julia Grant Scott (also operating under the name "BRAHMAMA") respects your privacy. This Privacy Policy explains what personal information we collect, how we use it, and the choices you have about your information when you visit our website at juliagrantscott.com or interact with our services.
+  </p>
+
+  <h2>1. Who we are</h2>
+  <p>
+    For the purposes of applicable data protection laws, the data controller is <strong>Julia Grant Scott</strong> ("we", "us", or "our"). You can contact us at <a href="mailto:julabye@gmail.com">julabye@gmail.com</a>.
+  </p>
+
+  <h2>2. Information we collect</h2>
+  <p>We may collect the following categories of information:</p>
+  <ul>
+    <li><strong>Information you provide directly:</strong> your name, email address, and any message content when you submit an enquiry form, send us an email, or register for a retreat.</li>
+    <li><strong>Information collected automatically:</strong> basic technical information such as your IP address, browser type, device type, referring page, and pages visited. This may be collected through our hosting provider's standard server logs.</li>
+    <li><strong>Cookies and similar technologies:</strong> we may use a minimal number of essential cookies to keep the site functioning. We do not use advertising or tracking cookies.</li>
+  </ul>
+
+  <h2>3. How we use your information</h2>
+  <p>We use the information we collect to:</p>
+  <ul>
+    <li>Respond to enquiries and communicate with you about retreats, sessions, or events you have expressed interest in.</li>
+    <li>Process bookings and provide the retreat or service you have signed up for.</li>
+    <li>Send occasional updates about upcoming retreats or offerings — only where you have explicitly opted in.</li>
+    <li>Maintain and improve the website, monitor for security issues, and comply with legal obligations.</li>
+  </ul>
+
+  <h2>4. Legal basis for processing (UK / EU residents)</h2>
+  <p>
+    Where applicable law requires it, we process your personal data on one or more of the following legal bases: your consent; the necessity of performing a contract with you (for example, delivering a retreat you have booked); compliance with a legal obligation; or our legitimate interests in operating, promoting, and protecting our business.
+  </p>
+
+  <h2>5. Sharing your information</h2>
+  <p>
+    We do not sell or rent your personal information. We may share information only with trusted third parties who help us operate our services — for example, payment processors (e.g. Stripe), email providers, and our hosting provider — and only to the extent necessary for them to perform those services. These providers are required to handle your information in line with applicable privacy laws.
+  </p>
+  <p>
+    We may also disclose information where required by law, court order, or to protect the rights, property, or safety of Julia Grant Scott, our retreat participants, or others.
+  </p>
+
+  <h2>6. International transfers</h2>
+  <p>
+    Because we operate retreats across multiple countries, your information may be transferred to and processed in countries other than the one in which you reside. Where required, we use appropriate safeguards (such as standard contractual clauses) for such transfers.
+  </p>
+
+  <h2>7. Data retention</h2>
+  <p>
+    We keep your personal information only for as long as is necessary for the purposes for which it was collected, including any legal, accounting, or reporting requirements. Enquiry emails are typically retained for up to two years; booking and payment records are retained for as long as required by tax and accounting law.
+  </p>
+
+  <h2>8. Your rights</h2>
+  <p>Depending on your location, you may have the right to:</p>
+  <ul>
+    <li>Access the personal information we hold about you.</li>
+    <li>Request correction of inaccurate or incomplete information.</li>
+    <li>Request deletion of your personal information.</li>
+    <li>Object to or restrict certain types of processing.</li>
+    <li>Withdraw consent at any time, where processing is based on consent.</li>
+    <li>Lodge a complaint with your local data protection authority.</li>
+  </ul>
+  <p>To exercise any of these rights, please email <a href="mailto:julabye@gmail.com">julabye@gmail.com</a>.</p>
+
+  <h2>9. Security</h2>
+  <p>
+    We take reasonable technical and organisational measures to protect your information from unauthorised access, alteration, disclosure, or destruction. However, no transmission over the internet or storage system is fully secure, and we cannot guarantee absolute security.
+  </p>
+
+  <h2>10. Children's privacy</h2>
+  <p>
+    Our services are intended for adults. We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, please contact us so we can delete it.
+  </p>
+
+  <h2>11. Third-party links</h2>
+  <p>
+    Our website may contain links to third-party sites (for example, Stripe, Instagram, Etsy). We are not responsible for the privacy practices of those sites. We encourage you to read their privacy policies before providing any personal information.
+  </p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>
+    We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page reflects the most recent revision. Where changes are material, we will take reasonable steps to notify you.
+  </p>
+
+  <h2>13. Contact</h2>
+  <p>
+    If you have questions about this Privacy Policy or how your information is handled, please contact:
+  </p>
+  <p>
+    <strong>Julia Grant Scott</strong><br>
+    Email: <a href="mailto:julabye@gmail.com">julabye@gmail.com</a>
+  </p>
+
+  <div class="sindoor-rule" aria-hidden="true"></div>
+  <p style="font-family: var(--font-label); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sindoor); opacity: 0.7;">
+    © 2026 Julia Grant Scott · All rights reserved
+  </p>
+</main>
+
+<footer>
+  <div class="legal-footer-inner">
+    <span class="copy">© 2026 Julia Grant Scott · BRAHMAMA</span>
+    <a href="terms-and-conditions">Terms &amp; Conditions</a>
+    <a href="index.html">Home</a>
+  </div>
+</footer>
+
+</body>
+</html>

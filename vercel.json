@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/Breath_of_Life_Landing",         "destination": "/breath-of-life-andalusia",     "permanent": true },
+    { "source": "/Colibri_Festival_Landing",       "destination": "/colibri-festival-corfu",       "permanent": true },
+    { "source": "/Alpine_Silence_Landing",         "destination": "/swiss-sanctuary-retreat",      "permanent": true },
+    { "source": "/Return_to_Roots_Poland_Landing", "destination": "/return-to-roots-poland",       "permanent": true },
+    { "source": "/Freiburg_Landing",               "destination": "/alpine-lumiere-freiburg",      "permanent": true },
+    { "source": "/Sardinia_Landing",               "destination": "/sunkissed-sardinia-retreat",   "permanent": true },
+    { "source": "/Long_Slow_Deep_Poland_Landing",  "destination": "/long-slow-deep-poland",        "permanent": true },
+    { "source": "/Joie_de_Vivre_Paris_Landing",    "destination": "/joie-de-vivre-paris",          "permanent": true },
+    { "source": "/Yatra_Landing",                  "destination": "/mother-india-yatra-2027",     "permanent": true }
+  ]
+}
