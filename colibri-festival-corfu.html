@@ -286,9 +286,9 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 }
 .philosophy-intro p em { color: var(--sindoor-d); }
 
-/* ══ OFFERING — BREATH OF LIFE (DARK) ═════════════════════════ */
+/* ══ OFFERING — BREATH OF LIFE (RED) ═════════════════════════ */
 .offering {
-  background: var(--ink); color: var(--cream);
+  background: var(--sindoor); color: var(--cream);
   padding: 8rem 0; position: relative; overflow: hidden;
 }
 .offering::before {
@@ -347,33 +347,40 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 .gallery { background: var(--cream); padding: 7rem 0; }
 .gallery-intro { text-align: center; margin-bottom: 4rem; }
 .gallery-intro .section-title { color: var(--sindoor-d); }
-.gallery-intro .sindoor-rule { background: var(--sindoor); margin: 1.4rem auto; }
 .gallery-grid {
-  display: grid; grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1.2rem;
-  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-  height: 80vh; min-height: 640px;
+  column-count: 4;
+  column-gap: 1rem;
+  max-width: 1280px; margin: 0 auto; padding: 0 2rem;
 }
-.gallery-item { position: relative; overflow: hidden; }
+.gallery-item {
+  position: relative; overflow: hidden;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  display: block;
+}
 .gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: auto; display: block;
   transition: transform 1.6s cubic-bezier(.16,.84,.32,1);
 }
 .gallery-item:hover img { transform: scale(1.04); }
-.gallery-item.tall { grid-row: 1 / span 2; }
 .gallery-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 1.6rem 1.4rem 1.2rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(42,20,16,0.55) 100%);
-  font-family: var(--font-label); font-size: 9.5px;
-  letter-spacing: 0.4em; text-transform: uppercase;
+  padding: 1.4rem 1.2rem 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(42,20,16,0.65) 100%);
+  font-family: var(--font-label); font-size: 9px;
+  letter-spacing: 0.36em; text-transform: uppercase;
   color: var(--cream);
 }
+@media (max-width: 1100px) {
+  .gallery-grid { column-count: 3; }
+}
 @media (max-width: 760px) {
-  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; min-height: 0; }
-  .gallery-item.tall { grid-row: auto; min-height: 60vh; }
-  .gallery-item:not(.tall) { min-height: 50vh; }
+  .gallery-grid { column-count: 2; column-gap: 0.7rem; padding: 0 1rem; }
+  .gallery-item { margin-bottom: 0.7rem; }
+  .gallery-caption { font-size: 8px; letter-spacing: 0.28em; padding: 1rem 0.8rem 0.7rem; }
+}
+@media (max-width: 420px) {
+  .gallery-grid { column-count: 2; }
 }
 
 /* ══ FACILITATOR / JULIA ══════════════════════════════════════ */
@@ -478,7 +485,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 
 /* ══ FOOTER ═══════════════════════════════════════════════════ */
 footer {
-  background: var(--ink); color: var(--cream);
+  background: var(--sindoor); color: var(--cream);
   padding: 4rem 0 3rem;
   font-family: var(--font-label); font-size: 9.5px;
   letter-spacing: 0.34em; text-transform: uppercase;
@@ -750,20 +757,57 @@ footer .pillars span { margin: 0 0.4em; opacity: 0.6; }
     <h2 class="section-title">Six days, one island,<br><em>a tribe re-membering</em></h2>
   </div>
   <div class="gallery-grid">
-    <div class="gallery-item tall reveal-left">
-      <img src="Colibri%20Images/gallery-1.webp"
-           alt="A moment from Colibri Spirit Festival — Corfu, Greece">
-      <div class="gallery-caption">Sacred Days · @colibrispirit.festival</div>
+    <div class="gallery-item reveal">
+      <img src="Colibri%20Images/tribe-2.webp" alt="Colibri Spirit Festival — Corfu, Greece" loading="lazy">
+      <div class="gallery-caption">Sacred Days · Colibri Farm</div>
     </div>
     <div class="gallery-item reveal delay-1">
-      <img src="Colibri%20Images/gallery-2.webp"
-           alt="Festival gathering at Colibri Farm — Arillas, Corfu">
-      <div class="gallery-caption">The Tribe · Colibri Farm</div>
+      <img src="Colibri%20Images/tribe-1.webp" alt="Festival gathering at Colibri Farm — Arillas, Corfu" loading="lazy">
+      <div class="gallery-caption">The Tribe · Arillas</div>
     </div>
-    <div class="gallery-item reveal-right delay-2">
-      <img src="Colibri%20Images/gallery-3.webp"
-           alt="Colibri Spirit Festival — Arillas, Corfu">
-      <div class="gallery-caption">Living Art · Arillas, Corfu</div>
+    <div class="gallery-item reveal delay-2">
+      <img src="Colibri%20Images/tribe-4.webp" alt="Ceremony light at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Ceremony Light · Corfu</div>
+    </div>
+    <div class="gallery-item reveal delay-3">
+      <img src="Colibri%20Images/tribe-7.webp" alt="Colibri Spirit Festival landscape — Arillas, Corfu" loading="lazy">
+      <div class="gallery-caption">Living Art · Arillas</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="Colibri%20Images/tribe-5.webp" alt="Embodied movement at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Movement Medicine · Colibri Farm</div>
+    </div>
+    <div class="gallery-item reveal delay-1">
+      <img src="Colibri%20Images/tribe-3.webp" alt="Colibri Farm overlooking the Mediterranean Sea" loading="lazy">
+      <div class="gallery-caption">Held by Land · Arillas</div>
+    </div>
+    <div class="gallery-item reveal delay-2">
+      <img src="Colibri%20Images/tribe-6.webp" alt="Sound and spirit at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Sound &amp; Spirit · Corfu</div>
+    </div>
+    <div class="gallery-item reveal delay-3">
+      <img src="Colibri%20Images/tribe-9.webp" alt="Heart field at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Heart Field · Colibri Farm</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="Colibri%20Images/tribe-8.webp" alt="Magic realms at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Magic Realms · Arillas</div>
+    </div>
+    <div class="gallery-item reveal delay-1">
+      <img src="Colibri%20Images/tribe-12.webp" alt="Sunlit devotion at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Sunlit Devotion · Corfu</div>
+    </div>
+    <div class="gallery-item reveal delay-2">
+      <img src="Colibri%20Images/tribe-10.webp" alt="Communion at Colibri Farm" loading="lazy">
+      <div class="gallery-caption">Communion · Colibri Farm</div>
+    </div>
+    <div class="gallery-item reveal delay-3">
+      <img src="Colibri%20Images/tribe-11.webp" alt="Prayer in motion at Colibri Spirit Festival" loading="lazy">
+      <div class="gallery-caption">Prayer in Motion · Arillas</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="Colibri%20Images/tribe-14.webp" alt="A homecoming at Colibri Spirit Festival — Corfu" loading="lazy">
+      <div class="gallery-caption">Homecoming · Corfu</div>
     </div>
   </div>
 </section>
