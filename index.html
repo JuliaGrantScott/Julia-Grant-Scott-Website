@@ -1177,61 +1177,25 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 }
 .pillar-item:hover .pillar-desc { opacity: 0.95; }
 
-/* ══ WATER BLESSING — full photograph + reflection passage ══ */
+/* ══ WATER BLESSING — 50/50 split, mirrored from hero layout ══ */
 .water-blessing-strip {
   width: 100%;
   background: var(--cream);
-  padding: 6rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   isolation: isolate;
 }
 
-.water-blessing-grid {
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 4fr 5fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-/* The full natural-ratio photograph */
-.water-blessing-photo {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: var(--ink);
-  border: 0.5px solid rgba(201,48,30,0.18);
-}
-
-.water-blessing-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Whisper-quiet Flower of Life — same treatment as the hero */
-.water-blessing-fol {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 78%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  pointer-events: none;
-  opacity: 0.07;
-  mix-blend-mode: screen;
-  z-index: 2;
-}
-
-@media (max-width: 768px) {
-  .water-blessing-fol { width: 70%; opacity: 0.06; }
-}
-
-/* Reflection passage on the right */
+/* Text side — mirrors .hero-left padding scale */
 .water-blessing-text {
   font-family: var(--font-literary);
   color: var(--ink);
-  max-width: 560px;
+  padding: 6rem 5rem 6rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .water-blessing-text .eyebrow {
@@ -1261,7 +1225,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   line-height: 1.85;
   margin-bottom: 1.05rem;
   color: var(--ink);
-  opacity: 0.86;
+  opacity: 0.88;
 }
 
 .water-blessing-text p:last-child {
@@ -1271,15 +1235,64 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   opacity: 1;
 }
 
+/* Emphasised "humility" — italic + heavier weight, sindoor-tinted */
+.water-blessing-text .accent {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--sindoor);
+  letter-spacing: 0.005em;
+}
+
+/* Photo side — full-bleed in its half, like .hero-right */
+.water-blessing-photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  min-height: 100%;
+}
+
+.water-blessing-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Whisper-quiet Flower of Life — same treatment as the hero */
+.water-blessing-fol {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 78%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+
+/* Subtle gold vignette to harmonize with the cream/sindoor palette */
+.water-blessing-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,160,42,0.04) 0%, transparent 50%, rgba(42,20,16,0.18) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
 @media (max-width: 1024px) {
-  .water-blessing-strip { padding: 5rem 2.5rem; }
-  .water-blessing-grid { gap: 3rem; }
+  .water-blessing-text { padding: 5rem 3rem 4rem; }
 }
 @media (max-width: 768px) {
-  .water-blessing-strip { padding: 4rem 1.4rem; }
-  .water-blessing-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .water-blessing-text { max-width: 100%; }
-  .water-blessing-photo { max-width: 480px; margin: 0 auto; }
+  .water-blessing-strip { grid-template-columns: 1fr; }
+  .water-blessing-text { padding: 4rem 1.4rem 3rem; }
+  .water-blessing-photo { min-height: 60vh; order: -1; }
+  .water-blessing-fol { width: 70%; opacity: 0.06; }
 }
 
 /* Legacy classes left for any future use; not currently rendered */
@@ -2679,38 +2692,40 @@ footer {
   </div>
 </section>
 
-<!-- ══ WATER BLESSING — full photo with subtle FoL + reflection passage ══ -->
+<!-- ══ WATER BLESSING — 50/50 split with subtle FoL ══ -->
 <section class="water-blessing-strip" aria-label="A blessing — the vessel">
-  <div class="water-blessing-grid reveal">
-    <figure class="water-blessing-photo reveal-item">
-      <img src="waterblessing.jpg"
-           alt="Water blessing"
-           loading="lazy"
-           decoding="async">
 
-      <!-- Whisper-quiet Flower of Life over the photograph (matches hero) -->
-      <svg class="water-blessing-fol"
-           viewBox="-300 -300 600 600"
-           xmlns="http://www.w3.org/2000/svg"
-           aria-hidden="true">
-        <circle cx="0"    cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle cx="160"  cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle cx="-160" cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle cx="80"   cy="139"  r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle cx="-80"  cy="139"  r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle cx="80"   cy="-139" r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle cx="-80"  cy="-139" r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
-        <circle r="290" fill="none" stroke="#F6E9D2" stroke-width="0.5" opacity="0.7"/>
-      </svg>
-    </figure>
-    <div class="water-blessing-text reveal-item">
-      <span class="eyebrow">A blessing &nbsp;·&nbsp; The vessel</span>
-      <p class="opening">You are everything and you are nothing. The Universe holds both.</p>
-      <p>You can shape your life into something luminous and full. This human experience is a gift to be lived boldly, joyfully, completely.</p>
-      <p>And yet. Nothing is permanent. Everything that rises will dissolve. The form, the achievement, the identity — all of it is passing through.</p>
-      <p>The tool that keeps you in balance between these two truths is humility. Not the humility of smallness or self-diminishment. But the humility of one who knows they are a vessel. Who creates freely, loves fully, and holds it all lightly.</p>
-      <p>Nothing belongs to you. Everything is given.</p>
-    </div>
+  <!-- Text side -->
+  <div class="water-blessing-text reveal">
+    <span class="eyebrow reveal-item">A blessing &nbsp;·&nbsp; The vessel</span>
+    <p class="opening reveal-item">You are everything and you are nothing. The Universe holds both.</p>
+    <p class="reveal-item">You can shape your life into something luminous and full. This human experience is a gift to be lived boldly, joyfully, completely.</p>
+    <p class="reveal-item">And yet. Nothing is permanent. Everything that rises will dissolve. The form, the achievement, the identity — all of it is passing through.</p>
+    <p class="reveal-item">The tool that keeps you in balance between these two truths is <em class="accent">humility</em>. Not the humility of smallness or self-diminishment. But the humility of one who knows they are a vessel. Who creates freely, loves fully, and holds it all lightly.</p>
+    <p class="reveal-item">Nothing belongs to you. Everything is given.</p>
+  </div>
+
+  <!-- Photo side — full-bleed photograph with whisper Flower of Life -->
+  <div class="water-blessing-photo">
+    <img src="waterblessing.jpg"
+         alt="Water blessing"
+         loading="lazy"
+         decoding="async">
+
+    <!-- Whisper-quiet Flower of Life (matches hero) -->
+    <svg class="water-blessing-fol"
+         viewBox="-300 -300 600 600"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
+      <circle cx="0"    cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle cx="160"  cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle cx="-160" cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle cx="80"   cy="139"  r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle cx="-80"  cy="139"  r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle cx="80"   cy="-139" r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle cx="-80"  cy="-139" r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+      <circle r="290" fill="none" stroke="#F6E9D2" stroke-width="0.5" opacity="0.7"/>
+    </svg>
   </div>
 </section>
 
@@ -2793,11 +2808,10 @@ footer {
   </div>
   <div style="position:relative;z-index:2;max-width:680px;margin:0 auto;">
     <p class="eyebrow sound-eyebrow">Nāda Yoga &nbsp;·&nbsp; Sound as Medicine</p>
-    <h2 class="sound-title">When the voice carries<br><em>the name of God</em></h2>
+    <h2 class="sound-title">Nāda Brahma.<br>God is <em>sound.</em><br>Sound is <em>God.</em></h2>
     <span class="sound-om">&#x950;</span>
     <span class="sound-wave">ıllıllı &nbsp; ıllıllı &nbsp; ıllıllı</span>
     <p class="sound-body">
-      Nāda Brahma. God is sound. Sound is God.<br>
       The name and vibration of the divine, carried through mantra and sacred instruments, bypasses the thinking mind entirely.<br>
       It speaks directly to the soul. To the part of you that always knows.
     </p>
@@ -2848,6 +2862,15 @@ footer {
       <p class="testimonial-highlight">"A gateway to healing — and a magical way to plant a new narrative in your story."</p>
       <p class="testimonial-text">Each of us has a story. We go through a long journey to meet the spiritual teacher who resides within us — and when we find it, we realise we have the power to create and tell our story anew. Julia's healing sound workshop, guided by her enchanting voice, is exactly that gateway.</p>
       <p class="testimonial-author">Sun Yoga · Israel</p>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-photo">
+        <img src="Aram%20Iran.JPG" alt="Aram — retreat participant, Iran" loading="lazy" decoding="async">
+      </div>
+      <p class="testimonial-highlight">"Her presence felt like a remembrance — wild, grounded, and deeply attuned."</p>
+      <p class="testimonial-text">I first met Julia during an Ashtanga Yoga workshop in Wrocław, 2020. Her presence felt like a remembrance, a deep recognition of something both wild and grounded within the feminine. She carries a rare balance of depth and playfulness, humility and insight. There&rsquo;s an embodied quality in her that stirs something profound — an expression of Shakti that feels powerful, untamed, and deeply attuned. Her sound journeys are just as touching: there is something in her voice, soft yet penetrating, that seems to move through the body, creating space, resonance, and connection. Julia holds space with authenticity and grace. Being with her is an invitation to reconnect with something essential within yourself.</p>
+      <p class="testimonial-author">Aram · Iran</p>
     </div>
 
   </div>
