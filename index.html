@@ -498,7 +498,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 
 .hero-tatvam-subtitle {
   font-family: var(--font-literary);
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
   font-size: clamp(1.6rem, 2.8vw, 2.1rem);
   color: var(--ink);
@@ -778,10 +778,11 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   padding: 0;
 }
 
-/* Body — short quote vertically centred on the image */
+/* Body — short quote anchored to the lower portion of the image */
 .conviction-body {
   position: absolute;
-  inset: 0;
+  left: 0; right: 0;
+  bottom: 6rem;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -808,12 +809,11 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   letter-spacing: 0.01em;
 }
 
-/* Headline label — anchored at the upper part of the image */
-.conviction-purna {
+/* Sanskrit Pūrṇam — restored original typography, anchored at the top */
+.conviction-purnam-top {
   position: absolute;
   left: 0; right: 0;
   top: 3rem;
-  bottom: auto;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -822,26 +822,39 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   opacity: 0.62;
   padding: 0 2rem;
 }
-
-.conviction-purna-sanskrit {
+.conviction-purnam-glyph {
   font-family: var(--font-sacred);
   font-size: clamp(1.4rem, 2.6vw, 2rem);
   color: var(--cream);
   letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
   text-shadow: 0 1px 20px rgba(0,0,0,0.55);
+}
+
+/* "From Drama to Dharma" — anchored just below the face, Gratitude typography */
+.conviction-purna {
+  position: absolute;
+  left: 0; right: 0;
+  top: 58%;
+  bottom: auto;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .conviction-purna-translit {
   font-family: var(--font-literary);
-  font-style: italic;
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-style: normal;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
   text-transform: none;
   color: var(--cream);
-  opacity: 0.95;
-  text-shadow: 0 1px 18px rgba(0,0,0,0.55);
+  opacity: 1;
+  text-shadow: 0 2px 26px rgba(0,0,0,0.65);
 }
 
 @media (max-width: 1024px) {
@@ -852,10 +865,12 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   .conviction-intro { padding: 3.5rem 1.4rem 3rem; }
   .conviction-quote { font-size: clamp(1.05rem, 4.8vw, 1.4rem); }
   .conviction { min-height: clamp(540px, 80vh, 720px); }
-  .conviction-body { padding: 0 1.4rem; }
-  .conviction-body-quote { font-size: clamp(1.2rem, 5.4vw, 1.75rem); line-height: 1.45; }
-  .conviction-purna { top: 2rem; bottom: auto; }
-  .conviction-purna-translit { font-size: clamp(1.1rem, 4.8vw, 1.5rem); }
+  .conviction-body { padding: 0 1.4rem; bottom: 3rem; }
+  .conviction-body-quote { font-size: clamp(1.2rem, 5.4vw, 1.65rem); line-height: 1.45; }
+  .conviction-purnam-top { top: 2rem; }
+  .conviction-purnam-glyph { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+  .conviction-purna { top: 62%; bottom: auto; }
+  .conviction-purna-translit { font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1.15; }
 }
 
 /* ══ YATRA (RETREATS) ════════════════════════════════════════ */
@@ -1162,7 +1177,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 }
 .pillar-item:hover .pillar-desc { opacity: 0.95; }
 
-/* ══ WATER BLESSING — 4:5 crop + reflection passage ══ */
+/* ══ WATER BLESSING — full photograph + reflection passage ══ */
 .water-blessing-strip {
   width: 100%;
   background: var(--cream);
@@ -1179,33 +1194,37 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   align-items: center;
 }
 
-/* The 4:5 cropped image — focus on the water flowing above the head */
+/* The full natural-ratio photograph */
 .water-blessing-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--ink);
   border: 0.5px solid rgba(201,48,30,0.18);
 }
 
 .water-blessing-photo img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   display: block;
-  object-fit: cover;
-  /* Pull the visible window upward so we see the water + crown of head */
-  object-position: center 18%;
+  width: 100%;
+  height: auto;
 }
 
-.water-blessing-photo::after {
-  content: '';
+/* Whisper-quiet Flower of Life — same treatment as the hero */
+.water-blessing-fol {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.18) 100%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 78%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .water-blessing-fol { width: 70%; opacity: 0.06; }
 }
 
 /* Reflection passage on the right */
@@ -1260,7 +1279,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   .water-blessing-strip { padding: 4rem 1.4rem; }
   .water-blessing-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .water-blessing-text { max-width: 100%; }
-  .water-blessing-photo { max-width: 360px; margin: 0 auto; }
+  .water-blessing-photo { max-width: 480px; margin: 0 auto; }
 }
 
 /* Legacy classes left for any future use; not currently rendered */
@@ -2424,7 +2443,7 @@ footer {
     <!-- Tat Tvam Asi — title + subtitle + sanskrit -->
     <div class="hero-tatvam fu d4">
       <h1 class="hero-tatvam-title">Tat Tvam Asi</h1>
-      <p class="hero-tatvam-subtitle">you are that.</p>
+      <p class="hero-tatvam-subtitle">You Are That</p>
       <p class="hero-tatvam-sanskrit" lang="sa">&#x924;&#x924;&#x94D;&#x202F;&#x924;&#x94D;&#x935;&#x092E;&#x094D;&#x202F;&#x0905;&#x0938;&#x093F;</p>
     </div>
 
@@ -2478,10 +2497,18 @@ footer {
 <!-- ══ CONVICTION BODY — body anchored low on the image ══════ -->
 <section class="conviction" aria-label="Wholeness — the radical position">
   <div class="conviction-body">
-    <p class="conviction-body-quote">&ldquo;At some point the story gets exhausting. <em>Who am I</em> beneath all of this?&rdquo;</p>
+    <p class="conviction-body-quote">
+      &ldquo;At some point the story gets exhausting.<br>
+      <em>Who am I</em> beneath all of this?&rdquo;
+    </p>
   </div>
 
-  <!-- From Drama to Dharma — anchored at the upper portion of the image -->
+  <!-- Sanskrit Pūrṇam — anchored at the top of the image (original style) -->
+  <div class="conviction-purnam-top" aria-hidden="true">
+    <p class="conviction-purnam-glyph" lang="sa">&#x092A;&#x0942;&#x0930;&#x094D;&#x0923;&#x092E;&#x094D;</p>
+  </div>
+
+  <!-- From Drama to Dharma — anchored just below the face -->
   <div class="conviction-purna" aria-label="From Drama to Dharma">
     <p class="conviction-purna-translit">From Drama to Dharma</p>
   </div>
@@ -2652,14 +2679,29 @@ footer {
   </div>
 </section>
 
-<!-- ══ WATER BLESSING — 4:5 photo + reflection passage ══ -->
+<!-- ══ WATER BLESSING — full photo with subtle FoL + reflection passage ══ -->
 <section class="water-blessing-strip" aria-label="A blessing — the vessel">
   <div class="water-blessing-grid reveal">
     <figure class="water-blessing-photo reveal-item">
       <img src="waterblessing.jpg"
-           alt="Water blessing — water flowing over the crown of the head"
+           alt="Water blessing"
            loading="lazy"
            decoding="async">
+
+      <!-- Whisper-quiet Flower of Life over the photograph (matches hero) -->
+      <svg class="water-blessing-fol"
+           viewBox="-300 -300 600 600"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true">
+        <circle cx="0"    cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle cx="160"  cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle cx="-160" cy="0"    r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle cx="80"   cy="139"  r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle cx="-80"  cy="139"  r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle cx="80"   cy="-139" r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle cx="-80"  cy="-139" r="160" fill="none" stroke="#F6E9D2" stroke-width="0.7"/>
+        <circle r="290" fill="none" stroke="#F6E9D2" stroke-width="0.5" opacity="0.7"/>
+      </svg>
     </figure>
     <div class="water-blessing-text reveal-item">
       <span class="eyebrow">A blessing &nbsp;·&nbsp; The vessel</span>
