@@ -60,7 +60,7 @@
 
 /* ══ RESET ══════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 img, svg, video { max-width: 100%; height: auto; }
 
 body {
@@ -68,7 +68,7 @@ body {
   color: var(--ink);
   font-family: var(--font-literary);
   font-weight: 300;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.85;
   overflow-x: hidden;
 }
@@ -116,7 +116,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* ══ REUSABLE ════════════════════════════════════════════════ */
 .eyebrow {
   font-family: var(--font-label);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.5em;
   text-transform: uppercase;
@@ -127,7 +127,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .section-title {
   font-family: var(--font-literary);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
   font-weight: 600;
   line-height: 1.12;
   color: var(--ink);
@@ -152,7 +152,7 @@ nav {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 0 3rem;
-  height: 76px;
+  height: 88px;
 }
 
 /* Logo — left */
@@ -165,14 +165,14 @@ nav {
 
 .nav-om {
   font-family: var(--font-sacred);
-  font-size: 28px;
+  font-size: 38px;
   color: var(--sindoor);
   line-height: 1;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 43px; height: 43px;
+  width: 56px; height: 56px;
 }
 
 .nav-om svg {
@@ -196,7 +196,7 @@ nav {
 
 .nav-brand-name {
   font-family: var(--font-label);
-  font-size: 10.5px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.28em;
   color: var(--sindoor);
@@ -205,10 +205,10 @@ nav {
 .nav-subtitle {
   font-family: var(--font-literary);
   font-style: italic;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 300;
   color: var(--ink);
-  opacity: 0.42;
+  opacity: 0.65;
   letter-spacing: 0.08em;
   line-height: 1;
   margin-top: 2px;
@@ -227,12 +227,12 @@ nav {
 
 .nav-links a {
   font-family: var(--font-label);
-  font-size: 9px;
-  font-weight: 400;
+  font-size: 11.5px;
+  font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ink);
-  opacity: 0.72;
+  opacity: 0.85;
   text-decoration: none;
   transition: opacity 0.3s, color 0.3s;
 }
@@ -244,14 +244,14 @@ nav {
 
 .nav-book {
   font-family: var(--font-label);
-  font-size: 8.5px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.36em;
   text-transform: uppercase;
   color: var(--sindoor);
   border: 1px solid var(--sindoor);
   border-radius: 999px;
-  padding: 8px 20px;
+  padding: 11px 26px;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
   white-space: nowrap;
@@ -388,7 +388,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 130px; height: 130px;
+  width: 155px; height: 155px;
   overflow: visible;
 }
 
@@ -404,7 +404,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 
 .hero-om-glyph {
   font-family: var(--font-sacred);
-  font-size: 72px;
+  font-size: 88px;
   color: var(--sindoor);
   line-height: 1;
   position: relative;
@@ -429,7 +429,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 
 .hero-brand-name {
   font-family: var(--font-label);
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 500;
   letter-spacing: 0.32em;
   color: var(--sindoor);
@@ -438,9 +438,9 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 .hero-name-sub {
   font-family: var(--font-literary);
   font-style: italic;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--ink);
-  opacity: 0.48;
+  opacity: 0.7;
   letter-spacing: 0.12em;
   margin-top: 2px;
 }
@@ -537,13 +537,13 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 .btn-sindoor {
   display: inline-block;
   font-family: var(--font-label);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.36em;
   text-transform: uppercase;
   color: var(--cream);
   background: var(--sindoor);
-  padding: 13px 28px;
+  padding: 16px 36px;
   text-decoration: none;
   transition: background 0.35s;
   border: none;
@@ -555,13 +555,13 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 .btn-outline {
   display: inline-block;
   font-family: var(--font-label);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.36em;
   text-transform: uppercase;
   color: var(--ink);
   border: 0.5px solid rgba(42,20,16,0.35);
-  padding: 13px 28px;
+  padding: 16px 36px;
   text-decoration: none;
   transition: border-color 0.3s, color 0.3s;
 }
@@ -1701,10 +1701,57 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 
 .sangha-header { margin-bottom: 4rem; }
 
-.sangha-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+.sangha-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.sangha-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+.sangha-track .testimonial {
+  flex: 0 0 100%;
+  width: 100%;
+}
+.sangha-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+.sangha-arrow {
+  background: none;
+  border: 1px solid var(--sindoor);
+  color: var(--sindoor);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+.sangha-arrow:hover { background: var(--sindoor); color: var(--cream); }
+.sangha-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sangha-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(201,48,30,0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+.sangha-dot.active {
+  background: var(--sindoor);
+  transform: scale(1.3);
 }
 
 .testimonial {
@@ -2451,7 +2498,7 @@ footer {
     <!-- Tat Tvam Asi — title + subtitle + sanskrit -->
     <div class="hero-tatvam fu d4">
       <h1 class="hero-tatvam-title">Tat Tvam Asi</h1>
-      <p class="hero-tatvam-subtitle">You Are That</p>
+      <p class="hero-tatvam-subtitle">You Are That.</p>
       <p class="hero-tatvam-sanskrit" lang="sa">&#x924;&#x924;&#x94D;&#x202F;&#x924;&#x94D;&#x935;&#x092E;&#x094D;&#x202F;&#x0905;&#x0938;&#x093F;</p>
     </div>
 
@@ -2514,11 +2561,13 @@ footer {
   <!-- Sanskrit Pūrṇam — anchored at the top of the image (original style) -->
   <div class="conviction-purnam-top" aria-hidden="true">
     <p class="conviction-purnam-glyph" lang="sa">&#x092A;&#x0942;&#x0930;&#x094D;&#x0923;&#x092E;&#x094D;</p>
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--cream);opacity:0.75;letter-spacing:0.1em;margin-top:0.4rem;text-align:center;">Wholeness</div>
   </div>
 
   <!-- From Drama to Dharma — anchored just below the face -->
   <div class="conviction-purna" aria-label="From Drama to Dharma">
     <p class="conviction-purna-translit">From Drama to Dharma</p>
+    <div style="text-align:center;margin:1.2rem 0 0;font-family:'Tiro Devanagari Hindi',serif;font-size:2rem;color:#F6E9D2;opacity:0.72;line-height:1;">&#x950;</div>
   </div>
 </section>
 
@@ -2566,7 +2615,7 @@ footer {
 
     <a class="retreat-card" href="return-to-roots-poland">
       <div class="rc-date">19–22 August 2026</div>
-      <div class="rc-title">Return to Roots</div>
+      <div class="rc-title">Deeply Polish</div>
       <div class="rc-location">Żuławy &nbsp;·&nbsp; Poland &nbsp;·&nbsp; Full Moon</div>
       <div class="rc-desc">Return to your life feeling rooted, nourished and quietly alive. Four days, ten guests, in a boutique estate in the Żuławy region — rain-washed timber, clay walls, glass open to fields, and a full moon rising over open land. The last heat of summer meeting the first breath of stillness. <em>This is not a retreat from life. This is a retreat back into it.</em></div>
       <div class="rc-price">4,000 PLN / person · accommodation &amp; all meals included</div>
@@ -2600,7 +2649,7 @@ footer {
       <span class="rc-cta">View retreat →</span>
     </a>
 
-    <a class="retreat-card" href="joie-de-vivre-paris" style="background:#FBF1DC;">
+    <a class="retreat-card" href="joie-de-vivre-paris">
       <div class="rc-date">1–4 October 2026</div>
       <div class="rc-title">Joie de Vivre</div>
       <div class="rc-location">Paris &nbsp;·&nbsp; France</div>
@@ -2830,44 +2879,51 @@ footer {
     <p class="eyebrow">Sangha &nbsp;·&nbsp; The Community</p>
     <h2 class="section-title">Words from <em>the circle</em></h2>
   </div>
-  <div class="sangha-grid">
+  <div class="sangha-carousel" id="sanghaCarousel">
+    <div class="sangha-track" id="sanghaTrack">
 
-    <div class="testimonial">
-      <div class="testimonial-photo">
-        <img src="Anna%20Poland.JPG" alt="Anna — retreat participant, Poland" loading="lazy" decoding="async">
+      <div class="testimonial">
+        <div class="testimonial-photo">
+          <img src="Anna%20Poland.JPG" alt="Anna — retreat participant, Poland" loading="lazy" decoding="async">
+        </div>
+        <p class="testimonial-highlight">"One of the most transformative experiences of my life."</p>
+        <p class="testimonial-text">Julia creates a thoughtfully curated space — dance, music, yoga, woven with deep presence and attentiveness to oneself and others. Far more than a retreat: a healing journey inward and a way to self-empowerment.</p>
+        <p class="testimonial-author">Anna · Poland</p>
       </div>
-      <p class="testimonial-highlight">"One of the most transformative experiences of my life."</p>
-      <p class="testimonial-text">Julia creates a thoughtfully curated space — dance, music, yoga, woven with deep presence and attentiveness to oneself and others. Far more than a retreat: a healing journey inward and a way to self-empowerment.</p>
-      <p class="testimonial-author">Anna · Poland</p>
-    </div>
 
-    <div class="testimonial">
-      <div class="testimonial-photo">
-        <img src="Miro.jpg" alt="Miro — retreat participant" loading="lazy" decoding="async">
+      <div class="testimonial">
+        <div class="testimonial-photo">
+          <img src="Miro.jpg" alt="Miro — retreat participant" loading="lazy" decoding="async">
+        </div>
+        <p class="testimonial-highlight">"The union of movement, sound and medicine Julia holds is a true form of healing."</p>
+        <p class="testimonial-text">It strips you bare — gently, but unmistakably — guiding you into the truth. The moment you surrender, love and answers begin to arise. Every ceremony is held in truth, love, and gratitude. I remain forever grateful to my spiritual sister Julia.</p>
+        <p class="testimonial-author">Miro</p>
       </div>
-      <p class="testimonial-highlight">"The union of movement, sound and medicine Julia holds is a true form of healing."</p>
-      <p class="testimonial-text">It strips you bare — gently, but unmistakably — guiding you into the truth. The moment you surrender, love and answers begin to arise. Every ceremony is held in truth, love, and gratitude. I remain forever grateful to my spiritual sister Julia.</p>
-      <p class="testimonial-author">Miro</p>
-    </div>
 
-    <div class="testimonial">
-      <div class="testimonial-photo">
-        <img src="Sun.JPG" alt="Sun Yoga — sound healing participant, Israel" loading="lazy" decoding="async">
+      <div class="testimonial">
+        <div class="testimonial-photo">
+          <img src="Sun.JPG" alt="Sun Yoga — sound healing participant, Israel" loading="lazy" decoding="async">
+        </div>
+        <p class="testimonial-highlight">"A gateway to healing — and a magical way to plant a new narrative in your story."</p>
+        <p class="testimonial-text">Each of us has a story. We go through a long journey to meet the spiritual teacher who resides within us — and when we find it, we realise we have the power to create and tell our story anew. Julia's healing sound workshop, guided by her enchanting voice, is exactly that gateway.</p>
+        <p class="testimonial-author">Sun Yoga · Israel</p>
       </div>
-      <p class="testimonial-highlight">"A gateway to healing — and a magical way to plant a new narrative in your story."</p>
-      <p class="testimonial-text">Each of us has a story. We go through a long journey to meet the spiritual teacher who resides within us — and when we find it, we realise we have the power to create and tell our story anew. Julia's healing sound workshop, guided by her enchanting voice, is exactly that gateway.</p>
-      <p class="testimonial-author">Sun Yoga · Israel</p>
-    </div>
 
-    <div class="testimonial">
-      <div class="testimonial-photo">
-        <img src="Aram%20Iran.JPG" alt="Aram — retreat participant, Iran" loading="lazy" decoding="async">
+      <div class="testimonial">
+        <div class="testimonial-photo">
+          <img src="Aram%20Iran.JPG" alt="Aram — retreat participant, Iran" loading="lazy" decoding="async">
+        </div>
+        <p class="testimonial-highlight">"Her presence felt like a remembrance — wild, grounded, and deeply attuned."</p>
+        <p class="testimonial-text">I first met Julia during an Ashtanga Yoga workshop in Wrocław, 2020. Her presence felt like a remembrance, a deep recognition of something both wild and grounded within the feminine. She carries a rare balance of depth and playfulness, humility and insight. There&rsquo;s an embodied quality in her that stirs something profound — an expression of Shakti that feels powerful, untamed, and deeply attuned. Her sound journeys are just as touching: there is something in her voice, soft yet penetrating, that seems to move through the body, creating space, resonance, and connection. Julia holds space with authenticity and grace. Being with her is an invitation to reconnect with something essential within yourself.</p>
+        <p class="testimonial-author">Aram · Iran</p>
       </div>
-      <p class="testimonial-highlight">"Her presence felt like a remembrance — wild, grounded, and deeply attuned."</p>
-      <p class="testimonial-text">I first met Julia during an Ashtanga Yoga workshop in Wrocław, 2020. Her presence felt like a remembrance, a deep recognition of something both wild and grounded within the feminine. She carries a rare balance of depth and playfulness, humility and insight. There&rsquo;s an embodied quality in her that stirs something profound — an expression of Shakti that feels powerful, untamed, and deeply attuned. Her sound journeys are just as touching: there is something in her voice, soft yet penetrating, that seems to move through the body, creating space, resonance, and connection. Julia holds space with authenticity and grace. Being with her is an invitation to reconnect with something essential within yourself.</p>
-      <p class="testimonial-author">Aram · Iran</p>
-    </div>
 
+    </div>
+    <div class="sangha-carousel-controls">
+      <button class="sangha-arrow" id="sanghaPrev" aria-label="Previous testimonial">&#8592;</button>
+      <div class="sangha-dots" id="sanghaDots"></div>
+      <button class="sangha-arrow" id="sanghaNext" aria-label="Next testimonial">&#8594;</button>
+    </div>
   </div>
 
   <div class="sangha-cta">
@@ -2908,7 +2964,7 @@ footer {
           <option>Breath of Life · Spain · 21–26 June</option>
           <option>Colibri Festival · Corfu, Greece · 28 June – 3 July</option>
           <option>Swiss Sanctuary · Switzerland · 30 July – 2 August</option>
-          <option>Return to Roots · Żuławy, Poland · 19–22 August</option>
+          <option>Deeply Polish · Żuławy, Poland · 19–22 August</option>
           <option>Alpine Lumière · Freiburg · 28–30 August</option>
           <option>Sunkissed · Sardinia · 14–19 September</option>
           <option>L.S.D. Long Slow Deep · Izery, Poland · 29 Sept – 4 Oct</option>
@@ -2982,7 +3038,7 @@ footer {
         <li><a href="#yatra">Breath of Life · Spain</a></li>
         <li><a href="#yatra">Colibri Festival · Greece</a></li>
         <li><a href="#yatra">Swiss Sanctuary · Switzerland</a></li>
-        <li><a href="#yatra">Return to Roots · Poland</a></li>
+        <li><a href="#yatra">Deeply Polish · Poland</a></li>
         <li><a href="#yatra">Alpine Lumière · Freiburg</a></li>
         <li><a href="#yatra">Sunkissed · Sardinia</a></li>
         <li><a href="#yatra">L.S.D. Long Slow Deep · Poland</a></li>
@@ -3165,6 +3221,47 @@ This is your mold.
     setTimeout(() => btn.textContent = 'Copy Bio Text', 2000);
   });
 }
+
+/* ══ Testimonials carousel ═══════════════════════════════════ */
+(function() {
+  const track  = document.getElementById('sanghaTrack');
+  const dotsEl = document.getElementById('sanghaDots');
+  const prev   = document.getElementById('sanghaPrev');
+  const next   = document.getElementById('sanghaNext');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.testimonial');
+  let current  = 0;
+  let timer;
+
+  /* Build dots */
+  slides.forEach(function(_, i) {
+    const d = document.createElement('button');
+    d.className = 'sangha-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+    d.addEventListener('click', function() { goTo(i); });
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    current = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsEl.querySelectorAll('.sangha-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(function() { goTo(current + 1); }, 6000);
+  }
+
+  prev.addEventListener('click', function() { goTo(current - 1); });
+  next.addEventListener('click', function() { goTo(current + 1); });
+
+  resetTimer();
+})();
 </script>
 
 </body>
