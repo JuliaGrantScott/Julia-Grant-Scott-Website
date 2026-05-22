@@ -60,7 +60,7 @@
 
 /* ══ RESET ══════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; overflow-x: hidden; }
 img, svg, video { max-width: 100%; height: auto; }
 
 body {
@@ -1474,7 +1474,7 @@ body.nav-open .nav-toggle .bars::after  { top: 0; transform: rotate(-45deg); }
 /* Closing strip — softly-darkened photograph with quote anchored low */
 .bio-closing {
   position: relative;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   height: clamp(420px, 70vh, 720px);
