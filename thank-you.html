@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You — BRAHMAMA</title>
+  <meta name="robots" content="noindex, nofollow" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -125,12 +126,20 @@
     /* ── body prose ── */
     .prose {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.15rem, 1.8vw, 1.3rem);
+      font-size: clamp(1.22rem, 1.58vw, 1.4rem);
       font-weight: 300;
       line-height: 1.88;
       color: var(--ink);
       max-width: 540px;
-      margin: 0 auto 2.8rem;
+      margin: 0 auto 0;
+    }
+
+    .prose + .prose {
+      margin-top: 1.5rem;
+    }
+
+    .prose:last-of-type {
+      margin-bottom: 2.8rem;
     }
 
     .prose em {
@@ -213,14 +222,9 @@
     <div class="rule"></div>
 
     <!-- Prose -->
-    <p class="prose">
-      Something in you already knew this was the right move —
-      before the mind had words for it.<br /><br />
-      Your booking is confirmed. Everything you need
-      will arrive in your inbox shortly.<br /><br />
-      Until then: <em>rest in the knowing that you are already whole.</em><br />
-      This is where we begin.
-    </p>
+    <p class="prose">Something in you already knew this was the right move — before the mind had words for it.</p>
+    <p class="prose">Your booking is confirmed. Everything you need will arrive in your inbox shortly.</p>
+    <p class="prose">Until then: <em>rest in the knowing that you are already whole.</em> This is where we begin.</p>
 
     <!-- Signature -->
     <p class="signature">With all my love, Julia</p>
