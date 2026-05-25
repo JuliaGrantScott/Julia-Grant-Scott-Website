@@ -35,7 +35,7 @@ Fonts via Google Fonts. Devanagari and Cormorant should always preload.
 
 ### Typographic detail
 
-- **Body text** (Cormorant Garamond, light 300) — base size `19px` on desktop, line-height `1.78`. Long-form bio prose uses a fluid scale of `clamp(1.12rem, 1.42vw, 1.28rem)` with line-height `1.9`. Generous, breathing, readable on a phone in low light. Bigger feels devotional; tight feels editorial — we lean devotional.
+- **Body text** (Cormorant Garamond, light 300) — base size `20px` on desktop, line-height `1.78`. Long-form bio prose uses a fluid scale of `clamp(1.22rem, 1.58vw, 1.4rem)` with line-height `1.88`. Eyebrow labels (JetBrains Mono) sit at `12px / 0.46em` letter-spacing. Generous, breathing, readable on a phone in low light. Bigger feels devotional; tight feels editorial — we lean devotional.
 - Section labels in JetBrains Mono `7–9px`, letter-spacing `0.4–0.5em`, uppercase, sindoor at 50–65% opacity.
 - Italic descriptors (Cormorant) at 50% opacity follow most labels — *"colour ways · minimum size · clear space"* style.
 - Hairline rules (`0.5px`, sindoor at 20% opacity) separate sections. Thick rule (`4px` solid sindoor) marks major chapter transitions.

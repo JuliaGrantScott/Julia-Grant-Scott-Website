@@ -42,3 +42,18 @@ Live URL: https://juliascott.com (once Phase 5 completes)
 ### Open questions / things to confirm with Julia
 - The Sanskrit was placed on the closing strip — confirm that's the section she meant in the (missing) second screenshot.
 - Slug for the Freiburg retreat (`alpine-lumiere-freiburg`) is unchanged. If she wants the URL renamed, add a redirect in `vercel.json`.
+
+### 2026-05-22 — Home page edits, round 2 (Sush)
+
+- **Purna dots** now use the brand's tristana three-dot SVG (small-LARGE-small marigold circles) — same component as the BRAHMAMA wordmark in the nav. Aligned via a new `.purna-lockup` flex container so the dots and label share one baseline.
+- **Satyam · Śivam · Sundaram** restyled to mirror that Purna lockup — small Devanagari above, tristana-flanked transliteration below. No longer a big banner; reads as a quiet invocation.
+- **Retreats title** wrapped in `<strong>` (font-weight 700) via a `.yatra-title` rule.
+- **Yatra eyebrow** ("Yatra · Sacred Journeys · 2026") bumped from 10px → 13px, letter-spacing 0.42em, opacity 0.8.
+- **`~€700 per person`** removed from the Yatra meta. The "10–15 spaces per retreat" line stays.
+- **Global typography bigger again.** Base body `19px → 20px` on every page (12 files). `.eyebrow` default `10px → 12px`. Bio prose now `clamp(1.22rem, 1.58vw, 1.4rem)`. Retreat-card text, testimonial text, and offering-pillar text proportionally bumped. `BRAND.md` §1 updated to match.
+- **Offerings / Pillars section reworked:**
+  - Eyebrow now just `Pillars` (was "The Offerings · Four Pillars").
+  - The `01 · Yoga`, `02 · Sound`, `03 · Breath`, `04 · Vedanta` number rows are gone. Pillars are now distinguished by name and Devanagari mark alone.
+  - Pillar name, sanskrit, and description font sizes all bumped.
+  - Under the 4th pillar (now titled *"Advaita Vedanta — Self-Realisation"*), added Julia's new closing line as a `.pillar-coda`: *"Let us return to the true self — and be brought to oneness."* Sindoor italic, separated from the body by a hairline rule.
+- **About section red lines.** The two centred sindoor refrains were replaced with three plain-body sindoor-red paragraphs (no italic, no centring, no border): *"It is all my heritage."*, *"It all gave me the full human experience…"*, and *"And also — just a story."* They flow as body prose now, just coloured.
