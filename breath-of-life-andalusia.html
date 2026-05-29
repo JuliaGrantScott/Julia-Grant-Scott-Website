@@ -13,6 +13,12 @@ s.parentNode.insertBefore(t,s)}(window, document,"script",
 "https://connect.facebook.net/en_US/fbevents.js");
 fbq("init", "1319334359528637");
 fbq("track", "PageView");
+fbq('track', 'ViewContent', {
+  content_name: 'Breath of Life · Andalusia',
+  content_category: 'Retreat',
+  value: 999.00,
+  currency: 'EUR'
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1319334359528637&ev=PageView&noscript=1"
@@ -1009,7 +1015,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
     <a href="#facilitator">Sangha</a>
     <a href="#cta">About</a>
   </div>
-  <a class="nav-cta" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" target="_blank" rel="noopener noreferrer">☽ Book</a>
+  <a class="nav-cta" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Breath of Life · Andalusia', value: 999.00, currency: 'EUR'});">☽ Book</a>
 </nav>
 
 <!-- HERO -->
@@ -1505,7 +1511,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       </p>
     </div>
     <div class="reveal delay-4" style="margin-top: 3rem;">
-      <a class="cta-button" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" id="bookButton" target="_blank" rel="noopener noreferrer">☽ Book Your Place</a>
+      <a class="cta-button" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" id="bookButton" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'Lead', {content_name: 'Breath of Life · Andalusia', value: 999.00, currency: 'EUR'});">☽ Book Your Place</a>
     </div>
     <div class="reveal delay-5">
       <div class="cta-foot"><span class="moon">☽</span> &nbsp; €1,350 · Stripe checkout to follow</div>
