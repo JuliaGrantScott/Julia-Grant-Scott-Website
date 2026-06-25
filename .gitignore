@@ -4,3 +4,18 @@
 
 # Local reference docs — kept on disk, not deployed
 BRAHMAMA_Brand_Guidelines.html
+
+# Design/dev working files — not for deployment
+01-hero.png
+02-four-doors.png
+03-andalusia.png
+04-what-is-held.png
+05-who-holds.png
+06-come-breathe.png
+Breath of Life Carousel - Edited.html
+flower-of-life-cream.svg
+flower-of-life-marigold.svg
+fonts/
+
+# Carousel design workspace — HTML files for social graphics, never deployed
+carousel-work/

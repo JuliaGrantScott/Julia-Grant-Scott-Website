@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,"script",
+"https://connect.facebook.net/en_US/fbevents.js");
+fbq("init", "1319334359528637");
+fbq("track", "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1319334359528637&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sun &amp; Roots · A Six-Day Retreat in Sardinia · Julia Grant-Scott &amp; Edi Csanalosi</title>
@@ -22,14 +39,14 @@
   --font-label:    'JetBrains Mono', 'Courier New', monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-literary);
   font-weight: 300;
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 20px;
+  line-height: 1.78;
   overflow-x: hidden;
 }
 body::before {
@@ -724,7 +741,21 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
   .reveal, .reveal-fade { opacity: 1 !important; transform: none !important; }
 }
 
-/* ══ MOBILE RESPONSIVENESS SAFETY NET ════════════════════════════════ */
+/* ══ MOBILE RESPONSIVENESS ══════════════════════════════════════════ */
+
+/* Phil-split: on mobile always show text above photo, even on flip panels */
+@media (max-width: 760px) {
+  .phil-split.flip .phil-split-text { order: 1; }
+  .phil-split.flip .phil-split-photo { order: 2; }
+  .phil-split-photo { min-height: 45vh; }
+}
+
+/* Collage tile labels readable on 2-column layout */
+@media (max-width: 880px) {
+  .collage .tile .title { font-size: 1rem; }
+  .collage .t01, .collage .t04 { grid-column: 1 / span 2; }
+}
+
 /* Ensures consistent behavior on phones from 320px and up */
 @media (max-width: 600px) {
   html, body { -webkit-text-size-adjust: 100%; }
@@ -733,17 +764,38 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
   nav.topnav .nav-mark .om { font-size: 22px !important; }
   nav.topnav .nav-mark .word { font-size: 10px !important; letter-spacing: 0.24em !important; }
   nav.topnav .nav-mark .sub { font-size: 9px !important; letter-spacing: 0.04em !important; }
-  nav.topnav .nav-cta { padding: 10px 16px !important; font-size: 9px !important; letter-spacing: 0.22em !important; min-height: 40px; display: inline-flex !important; align-items: center; }
+  nav.topnav .nav-cta { padding: 10px 16px !important; font-size: 9px !important; letter-spacing: 0.22em !important; min-height: 44px; display: inline-flex !important; align-items: center; }
   .wrap, .wrap-narrow { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
   section { padding: 4.5rem 0 !important; }
   img, video { max-width: 100% !important; height: auto !important; }
   /* Make any remaining grids more forgiving */
   [style*="grid-template-columns"] { word-break: break-word; }
+  /* CTA button — full-width for easy tapping on mobile */
+  .cta-button {
+    width: 100%; max-width: 340px;
+    justify-content: center;
+    min-height: 52px;
+    padding: 1.1rem 1.6rem !important;
+    font-size: 10px !important;
+    letter-spacing: 0.34em !important;
+  }
+  .cta { padding: 6rem 0 !important; }
+  /* Collage — shorter rows at phone width */
+  .collage { grid-auto-rows: 150px !important; gap: 4px !important; padding: 0 1rem !important; }
+  /* Full-bleed image sections — reduce min-heights for phones */
+  .sutra-bridge { min-height: 460px !important; }
+  .venue-hero { height: 65vh !important; min-height: 380px !important; }
+  .closing-image { height: 60vh !important; min-height: 340px !important; }
+  /* Phil-split photos don't need to be as tall */
+  .phil-split-photo { min-height: 38vh !important; }
+  /* Overview body text comfortable at phone size */
+  .overview-body { font-size: 1.05rem !important; }
 }
 @media (max-width: 380px) {
   nav.topnav { padding: 0 0.85rem !important; height: 58px !important; }
   nav.topnav .nav-mark .sub { display: none !important; }
   nav.topnav .nav-cta { padding: 9px 12px !important; font-size: 8.5px !important; }
+  .collage { grid-auto-rows: 130px !important; }
 }
 
 
@@ -814,9 +866,9 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
     <a href="#philosophy">Coherence</a>
     <a href="#schedule">Rhythm</a>
     <a href="#facilitator">Sangha</a>
-    <a href="#cta">Book</a>
+    <a href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" target="_blank" rel="noopener noreferrer">Book</a>
   </div>
-  <a class="nav-cta" href="#cta">☽ Book</a>
+  <a class="nav-cta" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" target="_blank" rel="noopener noreferrer">☽ Book</a>
 </nav>
 
 <!-- HERO -->
@@ -968,7 +1020,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
         </p>
       </div>
     </div>
-    <div class="phil-split-photo reveal-scale delay-1" style="background-image: url(soleruju-gallery-images/05_panel_yoga.jpg);"></div>
+    <div class="phil-split-photo reveal-scale delay-1" style="background-image: url(Sunkissed%20Sardinia/c619e0_8fbed77b95f8419aad267de4cfcacda0.jpg);"></div>
   </div>
 
   <!-- Panel 03: text left, photo right -->
@@ -1025,19 +1077,19 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 
   <div class="collage reveal delay-1">
     <a class="tile t01" href="#schedule">
-      <img src="soleruju-gallery-images/c01_yoga.jpg" alt="Daily Ashtanga Vinyasa Yoga with Julia">
+      <img src="Sunkissed%20Sardinia/Julia%20Teaching.jpg" alt="Daily Ashtanga Vinyasa Yoga with Julia">
       <div class="label"><span class="num">01</span><span class="title">Daily Ashtanga Vinyasa Yoga</span></div>
     </a>
     <a class="tile t02" href="#schedule">
-      <img src="soleruju-gallery-images/c02_edi.jpg" alt="From Patterns to Potential with Edi Csanalosi">
-      <div class="label"><span class="num">02</span><span class="title">From Patterns to Potential · with Edi</span></div>
+      <img src="Sunkissed%20Sardinia/Transformative%20Sessions.jpg" alt="Sacred ceremony — Ganesh altar, flowers, intention">
+      <div class="label"><span class="num">02</span><span class="title">Transformative Sessions</span></div>
     </a>
     <a class="tile t03" href="#schedule">
       <img src="soleruju-gallery-images/c03_coherence.jpg" alt="Heart-brain coherence workshops">
       <div class="label"><span class="num">03</span><span class="title">Heart-Brain Coherence &amp; Neuroscience</span></div>
     </a>
     <a class="tile t04" href="#schedule">
-      <img src="soleruju-gallery-images/c04_breathwork.jpg" alt="Breathwork sessions">
+      <img src="Sunkissed%20Sardinia/instagram_C8FKYUHtlxh.jpg" alt="Breathwork sessions — Sole Ruju terrace, herbs, garden">
       <div class="label"><span class="num">04</span><span class="title">Breathwork Sessions</span></div>
     </a>
     <a class="tile t05" href="#schedule">
@@ -1045,7 +1097,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       <div class="label"><span class="num">05</span><span class="title">Opening Ceremony</span></div>
     </a>
     <a class="tile t06" href="#schedule">
-      <img src="soleruju-gallery-images/c06_closing.jpg" alt="Closing ceremony circle">
+      <img src="Sunkissed%20Sardinia/instagram_DX65B8qgpWw.jpg" alt="Closing ceremony circle">
       <div class="label"><span class="num">06</span><span class="title">Closing Ceremony</span></div>
     </a>
     <a class="tile t07" href="#schedule">
@@ -1053,7 +1105,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       <div class="label"><span class="num">07</span><span class="title">Exquisite Lunch · Daily</span></div>
     </a>
     <a class="tile t08" href="#schedule">
-      <img src="soleruju-gallery-images/c08_nature.jpg" alt="Nature immersion · sea, hills, Mediterranean scrub">
+      <img src="Sunkissed%20Sardinia/IMG_4476.JPG" alt="Nature immersion · sea, hills, Mediterranean scrub">
       <div class="label"><span class="num">08</span><span class="title">Nature Immersion · Sea &amp; Hills</span></div>
     </a>
     <a class="tile t09" href="#schedule">
@@ -1061,8 +1113,8 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       <div class="label"><span class="num">09</span><span class="title">Music &amp; Celebration</span></div>
     </a>
     <a class="tile t10" href="#schedule">
-      <img src="soleruju-gallery-images/c10_oneonone.jpg" alt="One-to-One session with Julia">
-      <div class="label"><span class="num">10</span><span class="title">One-to-One with Julia</span></div>
+      <img src="Sunkissed%20Sardinia/Group.jpg" alt="Community and connection — the Sole Ruju sangha">
+      <div class="label"><span class="num">10</span><span class="title">Community &amp; Connection</span></div>
     </a>
     <a class="tile t11" href="#schedule">
       <img src="soleruju-gallery-images/c11_sun.jpg" alt="Sardinian sun and golden light">
@@ -1307,10 +1359,10 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       </p>
     </div>
     <div class="reveal delay-4" style="margin-top: 3rem;">
-      <a class="cta-button" href="#" id="bookButton">☽ Book Your Place</a>
+      <a class="cta-button" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" id="bookButton" target="_blank" rel="noopener noreferrer">☽ Book Your Place</a>
     </div>
     <div class="reveal delay-5">
-      <div class="cta-foot"><span class="moon">☽</span> &nbsp; €700 programme + €180 lunch · Stripe checkout to follow</div>
+      <div class="cta-foot"><span class="moon">☽</span> &nbsp; €700 programme · €180 lunch · €500 deposit to reserve your place</div>
     </div>
   </div>
 </section>
@@ -1335,7 +1387,6 @@ window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
 document.getElementById('bookButton').addEventListener('click', (e) => {
-  e.preventDefault();
   e.target.style.transform = 'translateY(-2px) scale(0.98)';
   setTimeout(() => { e.target.style.transform = ''; }, 200);
 });

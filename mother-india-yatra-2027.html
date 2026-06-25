@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,"script",
+"https://connect.facebook.net/en_US/fbevents.js");
+fbq("init", "1319334359528637");
+fbq("track", "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1319334359528637&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yatra · A Pilgrimage to Mother India · Julia Grant-Scott · March 2027</title>
@@ -24,14 +41,14 @@
   --font-label:    'JetBrains Mono', 'Courier New', monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-literary);
   font-weight: 300;
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 20px;
+  line-height: 1.78;
   overflow-x: hidden;
 }
 body::before {
@@ -594,14 +611,15 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
   color: var(--sindoor); font-style: normal; margin-right: 0.6rem;
 }
 .not-included {
-  text-align: center; margin: 2rem auto 0;
+  text-align: center; margin: 2rem auto 0; max-width: 760px; padding: 0 1.5rem;
   font-family: var(--font-literary); font-style: italic;
-  font-size: 0.95rem; color: rgba(140,31,18,0.55);
+  font-size: 1.25rem; color: rgba(140,31,18,0.75);
 }
 .not-included strong {
-  font-family: var(--font-label); font-size: 9px; font-weight: 500;
+  display: block; margin-bottom: 0.5rem;
+  font-family: var(--font-label); font-size: 10px; font-weight: 500;
   letter-spacing: 0.42em; text-transform: uppercase;
-  color: var(--sindoor); font-style: normal; margin-right: 0.6rem;
+  color: var(--sindoor); font-style: normal;
 }
 
 /* ══ LOGISTICS ═══════════════════════════════════════════════ */
@@ -865,7 +883,21 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
   .reveal, .reveal-fade { opacity: 1 !important; transform: none !important; }
 }
 
-/* ══ MOBILE RESPONSIVENESS SAFETY NET ════════════════════════════════ */
+/* ══ MOBILE RESPONSIVENESS ══════════════════════════════════════════ */
+
+/* Land-split: on mobile always show text above photo, even on flip panels */
+@media (max-width: 760px) {
+  .land.flip .land-text { order: 1; }
+  .land.flip .land-photo { order: 2; }
+  .land-photo { min-height: 45vh; }
+}
+
+/* Collage tile labels readable on 2-column layout */
+@media (max-width: 880px) {
+  .collage .tile .title { font-size: 1rem; }
+  .collage .t01, .collage .t04 { grid-column: 1 / span 2; }
+}
+
 /* Ensures consistent behavior on phones from 320px and up */
 @media (max-width: 600px) {
   html, body { -webkit-text-size-adjust: 100%; }
@@ -874,17 +906,38 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
   nav.topnav .nav-mark .om { font-size: 22px !important; }
   nav.topnav .nav-mark .word { font-size: 10px !important; letter-spacing: 0.24em !important; }
   nav.topnav .nav-mark .sub { font-size: 9px !important; letter-spacing: 0.04em !important; }
-  nav.topnav .nav-cta { padding: 10px 16px !important; font-size: 9px !important; letter-spacing: 0.22em !important; min-height: 40px; display: inline-flex !important; align-items: center; }
+  nav.topnav .nav-cta { padding: 10px 16px !important; font-size: 9px !important; letter-spacing: 0.22em !important; min-height: 44px; display: inline-flex !important; align-items: center; }
   .wrap, .wrap-narrow { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
   section { padding: 4.5rem 0 !important; }
   img, video { max-width: 100% !important; height: auto !important; }
   /* Make any remaining grids more forgiving */
   [style*="grid-template-columns"] { word-break: break-word; }
+  /* CTA button — full-width for easy tapping on mobile */
+  .cta-button {
+    width: 100%; max-width: 340px;
+    justify-content: center;
+    min-height: 52px;
+    padding: 1.1rem 1.6rem !important;
+    font-size: 10px !important;
+    letter-spacing: 0.34em !important;
+  }
+  .cta { padding: 6rem 0 !important; }
+  /* Collage — shorter rows at phone width */
+  .collage { grid-auto-rows: 150px !important; gap: 4px !important; padding: 0 1rem !important; }
+  /* Full-bleed image sections — reduce min-heights for phones */
+  .sutra-bridge { min-height: 460px !important; }
+  .venue-hero { height: 65vh !important; min-height: 380px !important; }
+  .closing-image { height: 60vh !important; min-height: 340px !important; }
+  /* Land strip — tighter on phone */
+  .land-strip .strip-cell { min-height: 200px; }
+  /* Overview body text comfortable at phone size */
+  .overview-body { font-size: 1.05rem !important; }
 }
 @media (max-width: 380px) {
   nav.topnav { padding: 0 0.85rem !important; height: 58px !important; }
   nav.topnav .nav-mark .sub { display: none !important; }
   nav.topnav .nav-cta { padding: 9px 12px !important; font-size: 8.5px !important; }
+  .collage { grid-auto-rows: 130px !important; }
 }
 
 
@@ -993,7 +1046,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
     <a href="#schedule">Days</a>
     <a href="#facilitators">Guides</a>
   </div>
-  <a class="nav-cta" href="#cta">&#x950; Reserve</a>
+  <a class="nav-cta" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" target="_blank" rel="noopener noreferrer">&#x950; Reserve</a>
 </nav>
 
 <!-- HERO -->
@@ -1021,7 +1074,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
     </div>
   </div>
   <div class="hero-image">
-    <img class="main-img" src="India Retreat/Hero.JPG" alt="Mother India Yatra — pilgrimage hero image" />
+    <img class="main-img" src="India Retreat/Taj Mahal.png" alt="Mother India Yatra — pilgrimage hero image" />
   </div>
 </header>
 
@@ -1083,7 +1136,11 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 
 <!-- VENUE / FULL-BLEED HERO -->
 <section class="venue-hero" id="venue">
+<<<<<<< HEAD
   <img src="India Retreat/Hooves.JPG" alt="Held by the soil itself — pilgrimage on hoof">
+=======
+  <img src="India Retreat/Running horses.JPG" alt="Running horses — held by the soil itself">
+>>>>>>> c7199209e166bcfe6bb4b09451b9d22e83d7898f
   <div class="venue-overlay reveal-fade">
     <h2>Held by the soil itself &mdash; in palaces, on mountains, beside ancient lakes, and finally beside the sea.</h2>
     <div class="place">Rajasthan &middot; Tamil Nadu &middot; Goa</div>
@@ -1113,7 +1170,11 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 
   <!-- Sutra bridge — Maha Shivaratri night -->
   <div class="sutra-bridge">
+<<<<<<< HEAD
     <img src="India Retreat/Sanskrit.JPG" alt="Om Namaḥ Śivāya — Sanskrit invocation">
+=======
+    <img src="India Retreat/Sanskrit.JPG" alt="Sanskrit — Mahā Shivarātri offering">
+>>>>>>> c7199209e166bcfe6bb4b09451b9d22e83d7898f
     <div class="sutra-content">
       <div class="reveal-scale"><div class="sutra-marker">&mdash; Mahā Shivarātri &middot; The Great Night of Shiva &mdash;</div></div>
       <div class="reveal-scale delay-1"><div class="sutra-sanskrit">&#2323;&#2306; &#2344;&#2350;&#2358;&#2381;&#2358;&#2367;&#2357;&#2366;&#2351;</div></div>
@@ -1162,7 +1223,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
         </p>
       </div>
     </div>
-    <div class="land-photo reveal-right" style="background-image: url('India Retreat/IMG_4521.JPG');">
+    <div class="land-photo reveal-right" style="background-image: url('India Retreat/Lady Pot.JPG');">
       <div class="photo-tag">&mdash; Rajasthan &middot; the pink city</div>
     </div>
   </article>
@@ -1172,7 +1233,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
     <div class="strip-cell" style="background-image: url('India Retreat/Hawa Mahal.JPG');">
       <div class="strip-label">Hawa Mahal &middot; Jaipur</div>
     </div>
-    <div class="strip-cell" style="background-image: url('India Retreat/IMG_4525.JPG');">
+    <div class="strip-cell" style="background-image: url('India Retreat/Market.JPG');">
       <div class="strip-label">The Blue City &middot; Jodhpur</div>
     </div>
     <div class="strip-cell" style="background-image: url('India Retreat/Pushkar.JPG');">
@@ -1256,7 +1317,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
     <div class="strip-cell" style="background-image: url('India Retreat/Spices.JPG');">
       <div class="strip-label">Spices &middot; markets</div>
     </div>
-    <div class="strip-cell" style="background-image: url('India Retreat/IMG_4541.JPG');">
+    <div class="strip-cell" style="background-image: url('India Retreat/Temple.JPG');">
       <div class="strip-label">Spice &middot; turmeric &middot; cardamom</div>
     </div>
   </div>
@@ -1275,7 +1336,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
 
   <div class="collage reveal delay-1">
     <a class="tile t01" href="#schedule">
-      <img src="India Retreat/IMG_4522.JPG" alt="Daily Ashtanga Vinyasa Yoga">
+      <img src="India Retreat/Julia Teaching.jpg" alt="Daily Ashtanga Vinyasa Yoga">
       <div class="label"><span class="num">01</span><span class="title">Daily Ashtanga Vinyasa Yoga &middot; with Julia</span></div>
     </a>
     <a class="tile t02" href="#schedule">
@@ -1291,7 +1352,7 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       <div class="label"><span class="num">04</span><span class="title">Girivalam &middot; Walking Arunachala</span></div>
     </a>
     <a class="tile t05" href="#schedule">
-      <img src="India Retreat/IMG_4533.JPG" alt="Vedic chanting &amp; mantra">
+      <img src="India Retreat/Vedic Chanting.JPG" alt="Vedic chanting &amp; mantra">
       <div class="label"><span class="num">05</span><span class="title">Vedic Chanting</span></div>
     </a>
     <a class="tile t06" href="#schedule">
@@ -1303,16 +1364,16 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       <div class="label"><span class="num">07</span><span class="title">Guided Temple Visits &middot; Pushkar &amp; Tiruvannamalai</span></div>
     </a>
     <a class="tile t08" href="#schedule">
-      <img src="India Retreat/IMG_4531.JPG" alt="Yoga in Auroville">
+      <img src="India Retreat/Auroville.JPG" alt="Yoga in Auroville">
       <div class="label"><span class="num">08</span><span class="title">Yoga in Auroville</span></div>
     </a>
     <a class="tile t09" href="#schedule">
-      <img src="India Retreat/IMG_4544.JPG" alt="Breathwork sessions">
+      <img src="India Retreat/Breathwork.jpg" alt="Breathwork &amp; pranayama">
       <div class="label"><span class="num">09</span><span class="title">Breathwork</span></div>
     </a>
     <a class="tile t10" href="#schedule">
-      <img src="India Retreat/IMG_4528.JPG" alt="Embodiment with Masy">
-      <div class="label"><span class="num">10</span><span class="title">Embodiment &middot; Masy</span></div>
+      <img src="India Retreat/IMG_4528.JPG" alt="Experience Yoga's roots">
+      <div class="label"><span class="num">10</span><span class="title">Experience Yoga&#8217;s roots</span></div>
     </a>
     <a class="tile t11" href="#schedule">
       <img src="India Retreat/IMG_4523.JPG" alt="Accommodation — 13 nights">
@@ -1322,12 +1383,6 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       <img src="India Retreat/IMG_4539.JPG" alt="All meals — Indian vegetarian feasts">
       <div class="label"><span class="num">12</span><span class="title">All Meals &middot; Indian Feasts</span></div>
     </a>
-  </div>
-
-  <div class="included-extra reveal delay-2">
-    <strong>Also included</strong>
-    Internal transfers between all three destinations &middot; opening &amp; closing ceremony &middot;
-    flower offerings at the Pushkar ghats.
   </div>
 
   <div class="not-included reveal delay-2">
@@ -1592,10 +1647,10 @@ h1.hero-title em { font-style: italic; font-weight: 300; color: var(--sindoor); 
       </p>
     </div>
     <div class="reveal delay-4" style="margin-top: 3rem;">
-      <a class="cta-button" href="#" id="bookButton">&#x950; Join the Yatra</a>
+      <a class="cta-button" href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" id="bookButton" target="_blank" rel="noopener noreferrer">&#x950; Join the Yatra</a>
     </div>
     <div class="reveal delay-5">
-      <div class="cta-foot"><span class="moon">&#x950;</span> &nbsp; &euro;3,000 &middot; Stripe checkout to follow</div>
+      <div class="cta-foot"><span class="moon">&#x950;</span> &nbsp; &euro;500 deposit &middot; Secure Stripe checkout</div>
     </div>
   </div>
 </section>
@@ -1620,7 +1675,6 @@ window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
 document.getElementById('bookButton').addEventListener('click', (e) => {
-  e.preventDefault();
   e.target.style.transform = 'translateY(-2px) scale(0.98)';
   setTimeout(() => { e.target.style.transform = ''; }, 200);
 });

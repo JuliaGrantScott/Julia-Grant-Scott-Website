@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,"script",
+"https://connect.facebook.net/en_US/fbevents.js");
+fbq("init", "1319334359528637");
+fbq("track", "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1319334359528637&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — BRAHMAMA</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #F6E9D2;
+      --paper:   #FBF1DC;
+      --sindoor: #C9301E;
+      --sindoor-dark: #8C1F12;
+      --marigold:#E8A02A;
+      --tulsi:   #3E5A3A;
+      --ink:     #2A1410;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+    }
+
+    /* ── background flower-of-life watermark ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3Ccircle cx='60' cy='30' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3Ccircle cx='60' cy='90' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3Ccircle cx='34' cy='45' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3Ccircle cx='86' cy='45' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3Ccircle cx='34' cy='75' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3Ccircle cx='86' cy='75' r='30' fill='none' stroke='%23C9301E' stroke-width='0.6' opacity='0.07'/%3E%3C/svg%3E");
+      background-size: 120px 120px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── layout ── */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    /* ── om mark ── */
+    .om {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      color: var(--sindoor);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      animation: breathe 6s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50%       { opacity: 1;    transform: scale(1.04); }
+    }
+
+    /* ── wordmark ── */
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .dot-group { display: flex; align-items: center; gap: 3px; }
+    .dot { border-radius: 50%; background: var(--sindoor); }
+    .dot.sm { width: 3px; height: 3px; opacity: 0.6; }
+    .dot.lg { width: 5px; height: 5px; }
+
+    .brand-name {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(0.85rem, 1.6vw, 1rem);
+      letter-spacing: 0.35em;
+      color: var(--sindoor);
+      text-transform: uppercase;
+    }
+
+    /* ── divider rule ── */
+    .rule {
+      width: 60px;
+      height: 0.5px;
+      background: var(--sindoor);
+      opacity: 0.25;
+      margin: 0 auto 3rem;
+    }
+
+    /* ── headline ── */
+    .headline {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.3;
+      max-width: 640px;
+      margin-bottom: 1.8rem;
+    }
+
+    /* ── eyebrow ── */
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--sindoor);
+      opacity: 0.65;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── body prose ── */
+    .prose {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.22rem, 1.58vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.88;
+      color: var(--ink);
+      max-width: 540px;
+      margin: 0 auto 0;
+    }
+
+    .prose + .prose {
+      margin-top: 1.5rem;
+    }
+
+    .prose:last-of-type {
+      margin-bottom: 2.8rem;
+    }
+
+    .prose em {
+      font-style: italic;
+      color: var(--sindoor);
+    }
+
+    /* ── signature ── */
+    .signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-weight: 300;
+      color: var(--ink);
+      opacity: 0.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ── cta button ── */
+    .btn {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--sindoor);
+      border: none;
+      padding: 1rem 2.4rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease, opacity 0.3s ease;
+    }
+
+    .btn:hover { background: var(--sindoor-dark); }
+
+    /* ── footer devanagari ── */
+    .footer-invocation {
+      margin-top: 4rem;
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(0.85rem, 1.4vw, 1rem);
+      color: var(--sindoor);
+      opacity: 0.45;
+      letter-spacing: 0.12em;
+    }
+
+    /* ── mobile ── */
+    @media (max-width: 600px) {
+      .page { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Om mark -->
+    <div class="om">ॐ</div>
+
+    <!-- Wordmark -->
+    <div class="wordmark">
+      <div class="dot-group">
+        <div class="dot sm"></div>
+        <div class="dot lg"></div>
+        <div class="dot sm"></div>
+      </div>
+      <span class="brand-name">Brahmama</span>
+      <div class="dot-group">
+        <div class="dot sm"></div>
+        <div class="dot lg"></div>
+        <div class="dot sm"></div>
+      </div>
+    </div>
+
+    <!-- Eyebrow -->
+    <p class="eyebrow">You said yes</p>
+
+    <!-- Headline -->
+    <h1 class="headline">Welcome home.</h1>
+
+    <div class="rule"></div>
+
+    <!-- Prose -->
+    <p class="prose">Something in you already knew this was the right move — before the mind had words for it.</p>
+    <p class="prose">Your booking is confirmed. Everything you need will arrive in your inbox shortly.</p>
+    <p class="prose">Until then: <em>rest in the knowing that you are already whole.</em> This is where we begin.</p>
+
+    <!-- Signature -->
+    <p class="signature">With all my love, Julia</p>
+
+    <!-- CTA -->
+    <a href="/" class="btn">Return home</a>
+
+    <!-- Footer invocation -->
+    <p class="footer-invocation">सत्यं · शिवं · सुन्दरम्</p>
+
+  </div>
+</body>
+</html>

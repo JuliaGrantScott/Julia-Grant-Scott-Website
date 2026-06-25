@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,"script",
+"https://connect.facebook.net/en_US/fbevents.js");
+fbq("init", "1319334359528637");
+fbq("track", "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1319334359528637&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Return to Roots · A Boutique Retreat in the Polish Countryside · Julia Grant-Scott</title>
@@ -22,14 +39,14 @@
   --font-label:    'JetBrains Mono', 'Courier New', monospace;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-literary);
   font-weight: 300;
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 20px;
+  line-height: 1.78;
   overflow-x: hidden;
 }
 body::before {
@@ -661,7 +678,7 @@ footer a:hover { color: var(--marigold); }
     <a href="#schedule">The Journey</a>
     <a href="#about">Your Guide</a>
   </nav>
-  <a href="#book" class="nav-cta">Reserve Your Place</a>
+  <a href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" class="nav-cta" target="_blank" rel="noopener noreferrer">Reserve Your Place</a>
 </nav>
 
 <!-- ══ HERO ══════════════════════════════════════════════════ -->
@@ -971,7 +988,7 @@ footer a:hover { color: var(--marigold); }
       <div class="det">4,000 PLN per person<span>All meals &amp; accommodation incl.</span></div>
       <div class="det">Max 10 Guests<span>Boutique &amp; Exclusive</span></div>
     </div>
-    <a href="#" class="btn-book">Book Your Place · 4,000 PLN</a>
+    <a href="https://buy.stripe.com/8x29ATcDr70S68G9tmfjG01" class="btn-book" target="_blank" rel="noopener noreferrer">Book Your Place · 4,000 PLN</a>
     <div class="closing-mantra">Om Shanti Shanti Shanti</div>
   </div>
 </section>
