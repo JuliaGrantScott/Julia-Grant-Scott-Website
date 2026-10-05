@@ -3,6 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/internal",                       "destination": "/",                             "permanent": false },
+    { "source": "/internal/:path*",                "destination": "/",                             "permanent": false },
     { "source": "/Breath_of_Life_Landing",         "destination": "/breath-of-life-andalusia",     "permanent": true },
     { "source": "/Colibri_Festival_Landing",       "destination": "/colibri-festival-corfu",       "permanent": true },
     { "source": "/Alpine_Silence_Landing",         "destination": "/swiss-sanctuary-retreat",      "permanent": true },
